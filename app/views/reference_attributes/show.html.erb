@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @reference_attribute.reference_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reference_attribute.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @reference_attribute.value %>
+</p>
+
+<%= link_to 'Edit', edit_reference_attribute_path(@reference_attribute) %> |
+<%= link_to 'Back', reference_attributes_path %>

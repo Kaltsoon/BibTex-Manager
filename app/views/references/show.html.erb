@@ -1,0 +1,47 @@
+<% if notice %>
+	<div class="alert alert-info alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<%= notice %>
+	</div>
+<% end %>
+<div class="page-header button-header">
+  <h1><%= @reference.name %> <small><%= @reference.ref_type %></small></h1>
+  <div class="pull-right">
+    <%= link_to raw("<i class='fa fa-pencil'></i> Edit"), edit_reference_path(@reference), class: "btn btn-default" %>
+  </div>
+</div>
+<h2>Attributes</h2>
+<% if @reference.reference_attributes.empty? %>
+	<span class="text-muted">
+		No attributes yet. Add some below!
+	</span>
+<% else %>
+	<dl class="dl-horizontal">
+		<% @reference.reference_attributes.each do |attribute| %>
+		  	<dt><%= attribute.name %></dt>
+		  	<dd><%= attribute.value %></dd>
+	  	<% end %>
+	</dl>
+<% end %>
+<p>
+	<div class="panel-group" id="accordion">
+	  	<div class="panel panel-default">
+	    	<div class="panel-heading">
+	      		<h4 class="panel-title">
+	        		<a data-toggle="collapse" data-parent="#accordion" href="#add-a-new-attribute">
+	          			<i class="fa fa-plus"></i> Add a new attribute
+	        		</a>
+	      		</h4>
+	    	</div>
+		    <div id="add-a-new-attribute" class="panel-collapse collapse">
+		      	<div class="panel-body">
+		      		<div class="alert alert-info alert-dismissable">
+		      			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		      			<i class="fa fa-question-circle"></i> Add a new attribute by selecting the attribute name and filling in its value
+		      		</div>
+			       	<%= render "book_attributes_form", { reference: @reference, attributes: @book_attributes } if(@reference.ref_type=="book" and !@book_attributes.empty?) %>
+		      	</div>
+		    </div>
+	  	</div>
+	</div>
+</p>

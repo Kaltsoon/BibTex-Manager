@@ -1,0 +1,31 @@
+<h1>Listing reference_attributes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reference</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reference_attributes.each do |reference_attribute| %>
+      <tr>
+        <td><%= reference_attribute.reference_id %></td>
+        <td><%= reference_attribute.name %></td>
+        <td><%= reference_attribute.value %></td>
+        <td><%= link_to 'Show', reference_attribute %></td>
+        <td><%= link_to 'Edit', edit_reference_attribute_path(reference_attribute) %></td>
+        <td><%= link_to 'Destroy', reference_attribute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reference attribute', new_reference_attribute_path %>
