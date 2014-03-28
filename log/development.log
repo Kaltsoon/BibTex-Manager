@@ -24561,3 +24561,4 @@ Processing by ReferencesController#show as HTML
   [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
   Rendered references/show.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+  [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" ORDER BY "reference_attributes"."id" ASC LIMIT 1[0m
