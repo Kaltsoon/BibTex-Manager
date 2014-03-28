@@ -17,11 +17,24 @@
 	</span>
 <% else %>
 	<dl class="dl-horizontal">
-		<% @reference.reference_attributes.each do |attribute| %>
-		  	<dt><%= attribute.name %></dt>
-		  	<dd><%= attribute.value %></dd>
-	  	<% end %>
-	</dl>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<th>Name</th>
+				<th>Value</th>
+				<th></th>
+				<th></th>
+			</thead>
+			<tbody>
+				<% @reference.reference_attributes.each do |attribute| %>
+					<tr>
+						<td><%= attribute.name %></td>
+						<td><%= attribute.value %></td>
+						<td><a class="btn btn-default btn-xs"><i class="fa fa-pencil"></i> Edit</a></td>
+						<td><a class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Remove</a></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
 <% end %>
 <p>
 	<div class="panel-group" id="accordion">
@@ -38,9 +51,11 @@
 		      	<div class="panel-body">
 		      		<div class="alert alert-info alert-dismissable">
 		      			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		      			<i class="fa fa-question-circle"></i> Add a new attribute by selecting the attribute name and filling in its value
+		      			Add a new attribute by selecting the attribute name and filling in its value
 		      		</div>
-			       	<%= render "book_attributes_form", { reference: @reference, attributes: @book_attributes } if(@reference.ref_type=="book" and !@book_attributes.empty?) %>
+			       	<%= render "attributes_form", { reference: @reference, attributes: @book_attributes } if(@reference.ref_type=="book" and !@book_attributes.empty?) %>
+			       	<%= render "attributes_form", { reference: @reference, attributes: @inproceedings_attributes } if(@reference.ref_type=="inproceedings" and !@book_attributes.empty?) %>
+			       	<%= render "attributes_form", { reference: @reference, attributes: @article_attributes } if(@reference.ref_type=="article" and !@book_attributes.empty?) %>
 		      	</div>
 		    </div>
 	  	</div>

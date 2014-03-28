@@ -11,7 +11,10 @@ class ReferencesController < ApplicationController
   # GET /references/1
   # GET /references/1.json
   def show
-    @book_attributes = ["author", "title", "publisher", "year", "address"] - @reference.reference_attributes.map{|a| a.name}
+    reference_attributes =  @reference.reference_attributes.map{|a| a.name}
+    @book_attributes = ["author", "title", "publisher", "year", "address"] - reference_attributes
+    @inproceedings_attributes = ["author", "title", "year", "pages", "booktitle", "publisher", "address"] - reference_attributes
+    @article_attributes = ["author", "journal", "title", "volume", "number", "year", "pages", "publisher", "address"] - reference_attributes
   end
 
   # GET /references/new
@@ -65,7 +68,7 @@ class ReferencesController < ApplicationController
   private
 
     def set_types
-      @ref_types = ["book"]
+      @ref_types = ["book", "inproceedings", "article"]
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_reference
