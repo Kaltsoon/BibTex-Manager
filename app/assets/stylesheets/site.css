@@ -1,0 +1,24 @@
+.wrapper{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+.wrapper .container{
+	margin: 0px auto;
+	width: 90%;
+	max-width: 1200px;
+}
+.button-header{
+	overflow: hidden;
+}
+.button-header h1{
+	display: inline;
+}
+.references-list li{
+	padding: 15px;
+	border-bottom: 1px solid rgb(230,230,230);
+	margin-top: 0px;
+}
+.references-list li:nth-child(odd){
+	background-color: #F5F5F5;
+}
