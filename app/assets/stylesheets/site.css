@@ -22,3 +22,6 @@
 .references-list li:nth-child(odd){
 	background-color: #F5F5F5;
 }
+.hidden{
+	display: none;
+}

@@ -7,7 +7,10 @@
 <div class="page-header button-header">
   <h1><%= @reference.name %> <small><%= @reference.ref_type %></small></h1>
   <div class="pull-right">
-    <%= link_to raw("<i class='fa fa-pencil'></i> Edit"), edit_reference_path(@reference), class: "btn btn-default" %>
+    <div class="btn-group">
+  		<%= link_to raw("<i class='fa fa-pencil'></i> Edit"), edit_reference_path(@reference), class: "btn btn-default" %>
+  		<%= link_to raw("<i class='fa fa-times'></i> Remove"), @reference, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+	</div>
   </div>
 </div>
 <h2>Attributes</h2>
@@ -53,9 +56,10 @@
 		      			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 		      			Add a new attribute by selecting the attribute name and filling in its value
 		      		</div>
-			       	<%= render "attributes_form", { reference: @reference, attributes: @book_attributes } if(@reference.ref_type=="book" and !@book_attributes.empty?) %>
-			       	<%= render "attributes_form", { reference: @reference, attributes: @inproceedings_attributes } if(@reference.ref_type=="inproceedings" and !@book_attributes.empty?) %>
-			       	<%= render "attributes_form", { reference: @reference, attributes: @article_attributes } if(@reference.ref_type=="article" and !@book_attributes.empty?) %>
+		      		<% if @reference.get_attributes_not_set.empty? %>
+		      			<span class="text-muted">All attributes have been set!</span>
+		      		<% end %>
+			       	<%= render "attributes_form", { reference: @reference, attributes: @reference.get_attributes_not_set } if !@reference.get_attributes_not_set.empty? %>
 		      	</div>
 		    </div>
 	  	</div>

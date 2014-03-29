@@ -11,10 +11,6 @@ class ReferencesController < ApplicationController
   # GET /references/1
   # GET /references/1.json
   def show
-    reference_attributes =  @reference.reference_attributes.map{|a| a.name}
-    @book_attributes = ["author", "title", "publisher", "year", "address"] - reference_attributes
-    @inproceedings_attributes = ["author", "title", "year", "pages", "booktitle", "publisher", "address"] - reference_attributes
-    @article_attributes = ["author", "journal", "title", "volume", "number", "year", "pages", "publisher", "address"] - reference_attributes
   end
 
   # GET /references/new
@@ -30,14 +26,14 @@ class ReferencesController < ApplicationController
   # POST /references.json
   def create
     @reference = Reference.new(reference_params)
-    respond_to do |format|
-      if @reference.save
-        format.html { redirect_to @reference, notice: 'Reference was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @reference }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @reference.errors, status: :unprocessable_entity }
+    if @reference.save
+      @attributes=params.require(:attribute)
+      @attributes.each do |key, value|
+        ReferenceAttribute.create(reference_id: @reference.id, name: key, value: value)
       end
+      redirect_to @reference, notice: "Reference was successfully created"
+    else
+      render action: "new"
     end
   end
 
@@ -68,6 +64,9 @@ class ReferencesController < ApplicationController
   private
 
     def set_types
+      @book_required_attributes = BookReference.required_attributes
+      @article_required_attributes = ArticleReference.required_attributes
+      @inproceedings_required_attributes = InproceedingsReference.required_attributes
       @ref_types = ["book", "inproceedings", "article"]
     end
     # Use callbacks to share common setup or constraints between actions.
