@@ -1,6 +1,12 @@
 <div class="page-header">
 	<h1>New reference</h1>
 </div>
+<noscript>
+	<div class="alert alert-warning alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		This application requires JavaScript, please enable it to continue
+	</div>
+</noscript>
 <%= form_for(@reference) do |f| %>
 	<% if @reference.errors.any? %>
 	    <div class="alert alert-danger alert-dismissable">
@@ -26,7 +32,7 @@
 	<div id="attributes_form">
 	</div>
 	<div class="form-group">
-	    <%= f.submit class: "btn btn-success" %>
+	    <%= submit_tag "Create Reference", class: "btn btn-success", disabled: true, id: "submit_reference" %>
 	</div>
 <% end %>
 <div class="hidden" id="book_attributes_form">
