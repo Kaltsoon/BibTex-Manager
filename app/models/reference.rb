@@ -4,29 +4,11 @@ class Reference < ActiveRecord::Base
 	validates :ref_type, presence: true
 
 	def has_required_attribute(attribute)
-		case ref_type
-			when "book"
-			  return BookReference.required_attributes.include?(attribute.name)
-			when "article"
-			  return ArticleReference.required_attributes.include?(attribute.name)
-			when "inproceedings"
-			  return InproceedingsReference.required_attributes.include?(attribute.name)
-			else
-			  return false
-		end
+		return "#{ref_type.downcase.capitalize}Reference".constantize.required_attributes.include?(attribute.name)
 	end
 
 	def get_available_attributes()
-		case ref_type
-			when "book"
-			  return BookReference.available_attributes
-			when "article"
-			  return ArticleReference.available_attributes
-			when "inproceedings"
-			  return InproceedingsReference.available_attributes
-			else
-			  return []
-		end
+		return "#{ref_type.downcase.capitalize}Reference".constantize.required_attributes
 	end
 
 	def get_attributes_not_set()
