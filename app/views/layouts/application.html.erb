@@ -19,7 +19,7 @@
 		<div class="navbar-collapse collapse navbar-responsive-collapse">
 			<ul class="nav navbar-nav">
 				<li<% if controller.controller_name=="references" %> class="active"<% end %>><%= link_to "References", references_path %></li>
-				<li><a href="#"><i class="fa fa-download"></i> Download all references</a></li>
+				<li><%= link_to raw("<i class='fa fa-download'></i> Download all references</a></li>"), "/download_bibtex" %>
 			</ul>
 		</div>
 	</div>

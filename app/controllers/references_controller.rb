@@ -1,4 +1,6 @@
 class ReferencesController < ApplicationController
+  include BibtexGenerator
+
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
   before_action :set_types, only: [:new, :create]
 
@@ -59,6 +61,12 @@ class ReferencesController < ApplicationController
       format.html { redirect_to references_url }
       format.json { head :no_content }
     end
+  end
+
+  def download_bibtex
+    references = Reference.includes(:reference_attributes).all
+    bib = generate_bibtex_string(references)
+    send_data(bib.to_s, filename: "bitext.bib")
   end
 
   private

@@ -29,6 +29,7 @@ Bibtex::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  get "download_bibtex", to: "references#download_bibtex"
   get "/", to: "references#index"
   # Example resource route with sub-resources:
   #   resources :products do
