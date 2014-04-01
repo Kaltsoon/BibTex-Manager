@@ -1,3 +1,4 @@
+
 var ready = function(){
 	$("#submit_reference").removeAttr("disabled");
 	manage_attribute_form();

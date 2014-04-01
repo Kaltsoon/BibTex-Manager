@@ -27,7 +27,7 @@ class ReferenceAttributesController < ApplicationController
     @reference_attribute = ReferenceAttribute.new(reference_attribute_params)
     respond_to do |format|
       if @reference_attribute.save
-        format.html { redirect_to reference_path(@reference_attribute.reference_id), notice: "'#{@reference_attribute.name}' has been set to '#{@reference_attribute.value}'" }
+        format.html { redirect_to edit_reference_path(@reference_attribute.reference_id), notice: "Attribute '#{@reference_attribute.name}' has been set to '#{@reference_attribute.value}'" }
         format.json { render action: 'show', status: :created, location: @reference_attribute }
       else
         format.html { render action: 'new' }

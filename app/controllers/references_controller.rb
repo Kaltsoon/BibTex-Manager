@@ -43,8 +43,8 @@ class ReferencesController < ApplicationController
   # PATCH/PUT /references/1.json
   def update
     respond_to do |format|
-      if @reference.update(reference_params)
-        format.html { redirect_to @reference, notice: 'Reference was successfully updated.' }
+      if @reference.update(params.require(:reference).permit(:name))
+        format.html { redirect_to edit_reference_path(@reference), notice: "Reference name has been set to '#{@reference.name}'" }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

@@ -1,5 +1,44 @@
-<div class="page-header">
-	<h1>Edit reference</h1>
+<div class="page-header button-header">
+  <h1>Edit reference</h1>
+  <div class="pull-right">
+  	<%= link_to raw("<i class='fa fa-eye'></i> Show reference"), reference_path(@reference), class: "btn btn-default" %>
+  </div>
 </div>
-<%= render 'form' %>
+<% if @reference.errors.any? %>
+	<div class="alert alert-danger alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	  	<strong><%= pluralize(@reference.errors.count, "error") %> prohibited this reference from being saved:</strong>
+		  <ul>
+		  <% @reference.errors.full_messages.each do |msg| %>
+		    	<li><%= msg %></li>
+		  <% end %>
+		  </ul>
+	</div>
+<% end %>
+<% if notice %>
+	<div class="alert alert-info alert-dismissable">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<%= notice %>
+	</div>
+<% end %>
+<ul class="nav nav-tabs" id="edit-reference-tabs">
+  	<li class="active"><a href="#basic-information" data-toggle="tab"><i class="fa fa-pencil-square-o"></i> Basic information</a></li>
+  	<li><a href="#attributes" data-toggle="tab"><i class="fa fa-list"></i> Attributes</a></li>
+</ul>
+
+<div class="tab-content">
+  	<div class="tab-pane active" id="basic-information">
+  		<h2>Basic information</h2>
+  		<%= render "edit_reference_form", reference: @reference %>
+  	</div>
+  	<div class="tab-pane" id="attributes">
+  		<h2>Attributes</h2>
+		<% if @reference.reference_attributes.empty? %>
+			<span class="text-muted">
+				No attributes yet. Add some below!
+			</span>
+		<% end %>
+		<%= render "edit_attributes_form", reference: @reference %>
+  	</div>
+</div>
 

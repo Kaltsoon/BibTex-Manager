@@ -39018,3 +39018,2880 @@ DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a rel
   Rendered text template (0.0ms)
 Sent data bitext.bib (0.4ms)
 Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 09:25:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 370ms (Views: 331.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:25:31 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-04-01 09:25:32 +0300
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:25:34 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReference Load (0.4ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered references/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered references/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:26:34 +0300
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered references/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:09 +0300
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered references/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:27:47 +0300
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:29:19 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered references/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:29:19 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:29:19 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:29:20 +0300
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:32:43 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "1"]]
+ERROR: compiling _app_views_references_edit_html_erb__3691539721038589446_2163683760 RAISED /Users/kalle/Desktop/dream-team/app/views/references/edit.html.erb:25: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/kalle/Desktop/dream-team/app/views/references/edit.html.erb:27: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_references_edit_html_erb__3691539721038589446_2163683760(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "references/edit";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<div class="page-header">
+	<h1>Edit reference</h1>
+</div>
+<ul class="nav nav-tabs" id="edit-reference-tabs">
+  	<li class="active"><a href="#basic-information" data-toggle="tab"><i class="fa fa-pencil-square-o"></i> Basic information</a></li>
+  	<li><a href="#attributes" data-toggle="tab"><i class="fa fa-list"></i> Attributes</a></li>
+</ul>
+
+<div class="tab-content">
+  	<div class="tab-pane active" id="basic-information">
+
+  	</div>
+  	<div class="tab-pane" id="attributes">
+  		<h2>Attributes</h2>
+';		 if @reference.reference_attributes.empty? 
+@output_buffer.safe_append='			<span class="text-muted">
+				No attributes yet. Add some below!
+			</span>
+';		 else 
+@output_buffer.safe_append='		';@output_buffer.append=( render "edit_attributes_form", reference: @reference );@output_buffer.safe_append='
+  	</div>
+</div>
+
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:423:in `_run__2761256197175185226__process_action__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3678548370428491425__call__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered references/edit.html.erb within layouts/application (48.5ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (/Users/kalle/Desktop/dream-team/app/views/references/edit.html.erb:25: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/kalle/Desktop/dream-team/app/views/references/edit.html.erb:27: syntax error, unexpected $end, expecting keyword_end):
+    22: </div>
+  actionpack (4.0.3) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.3) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.3) lib/action_view/template.rb:248:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (4.0.3) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.3) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.3) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.3) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.3) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.3) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.3) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:423:in `_run__2761256197175185226__process_action__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.3) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.3) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.3) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.3) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.3) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.3) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.3) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.3) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:373:in `_run__3678548370428491425__call__callbacks'
+  activesupport (4.0.3) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:34:00 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mReferenceAttribute Exists (5.9ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 1]]
+ERROR: compiling _app_views_references__edit_attributes_form_html_erb___1515278137993300862_2155125980 RAISED /Users/kalle/Desktop/dream-team/app/views/references/_edit_attributes_form.html.erb:46: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_references__edit_attributes_form_html_erb___1515278137993300862_2155125980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "references/_edit_attributes_form";_old_output_buffer = @output_buffer;reference = reference = local_assigns[:reference];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<table class="table table-bordered table-hover">
+	<thead>
+		<th>Name</th>
+		<th>Value</th>
+		<th></th>
+		<th></th>
+	</thead>
+	<tbody>
+';		 reference.reference_attributes.each do |attribute| 
+@output_buffer.safe_append='			<tr>
+				<td>';@output_buffer.append=( attribute.name );@output_buffer.safe_append='</td>
+				<td>';@output_buffer.append=( attribute.value );@output_buffer.safe_append='</td>
+				<td><a class="btn btn-default btn-xs"><i class="fa fa-pencil"></i> Edit</a></td>
+				<td><a class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Remove</a></td>
+			</tr>
+';		 end 
+@output_buffer.safe_append='	</tbody>
+</table>
+'; end 
+@output_buffer.safe_append='<p>
+	<div class="panel-group" id="accordion">
+	  	<div class="panel panel-default">
+	    	<div class="panel-heading">
+	      		<h4 class="panel-title">
+	      			<span class="text-muted"><i class="fa fa-plus"></i></span>
+	        		<a data-toggle="collapse" data-parent="#accordion" href="#add-a-new-attribute">
+	          			Add a new attribute
+	        		</a>
+	      		</h4>
+	    	</div>
+		    <div id="add-a-new-attribute" class="panel-collapse collapse">
+		      	<div class="panel-body">
+		      		<div class="alert alert-info alert-dismissable">
+		      			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		      			Add a new attribute by selecting the attribute name and filling in its value
+		      		</div>
+';		      		 if reference.get_attributes_not_set.empty? 
+@output_buffer.safe_append='		      			<span class="text-muted">All attributes have been set!</span>
+';		      		 end 
+@output_buffer.safe_append='			       	';@output_buffer.append=( render "add_attributes_form", { reference: reference, attributes: reference.get_attributes_not_set } if !reference.get_attributes_not_set.empty? );@output_buffer.safe_append='
+		      	</div>
+		    </div>
+	  	</div>
+	</div>
+</p>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/kalle/Desktop/dream-team/app/views/references/edit.html.erb:20:in `_app_views_references_edit_html_erb__3691539721038589446_2179245100'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:423:in `_run__2761256197175185226__process_action__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3678548370428491425__call__callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p392/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/local/rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered references/_edit_attributes_form.html.erb (9.1ms)
+  Rendered references/edit.html.erb within layouts/application (95.5ms)
+Completed 500 Internal Server Error in 99ms
+
+ActionView::Template::Error (/Users/kalle/Desktop/dream-team/app/views/references/_edit_attributes_form.html.erb:46: syntax error, unexpected keyword_ensure, expecting $end):
+    43: 	  	</div>
+    44: 	</div>
+    45: </p>
+  app/views/references/edit.html.erb:20:in `_app_views_references_edit_html_erb__3691539721038589446_2179245100'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:34:29 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 1]]
+  [1m[36mReferenceAttribute Load (0.3ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  Rendered references/_edit_attributes_form.html.erb (11.5ms)
+  Rendered references/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-04-01 09:34:30 +0300
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered references/_edit_reference_form.html.erb (20.1ms)
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 1]]
+  [1m[35mReferenceAttribute Load (0.1ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  Rendered references/_edit_attributes_form.html.erb (1.1ms)
+  Rendered references/edit.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:10 +0300
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered references/_edit_reference_form.html.erb (1.5ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 1]]
+  [1m[36mReferenceAttribute Load (0.3ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  Rendered references/_edit_attributes_form.html.erb (1.7ms)
+  Rendered references/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:25 +0300
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:39:45 +0300
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/references/2/edit" for 127.0.0.1 at 2014-04-01 09:39:48 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered references/_edit_reference_form.html.erb (4.2ms)
+  [1m[35mReferenceAttribute Exists (0.4ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 2]]
+  [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (1.6ms)
+  Rendered references/_edit_attributes_form.html.erb (5.5ms)
+  Rendered references/edit.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/references/2" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+Processing by ReferencesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fpMCk06OtGj6bKDQZNgf4yx3ou/ScsNr2MGysjT8q0c=", "reference"=>{"name"=>"kirja1"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReference Exists (0.2ms)[0m  SELECT 1 AS one FROM "references" WHERE ("references"."name" = 'kirja1' AND "references"."id" != 2) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered references/_edit_reference_form.html.erb (2.6ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 2]]
+  [1m[36mReferenceAttribute Load (0.1ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (1.6ms)
+  Rendered references/_edit_attributes_form.html.erb (3.4ms)
+  Rendered references/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 31ms (Views: 22.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:39:57 +0300
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:08 +0300
+
+
+Started GET "/references/2" for 127.0.0.1 at 2014-04-01 09:40:10 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mReferenceAttribute Exists (0.3ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 2]]
+  [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  Rendered references/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (Missing partial references/attributes_form, application/attributes_form with {:locale=>[:en], :formats=>[:html, :xml], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/kalle/Desktop/dream-team/app/views"
+  * "/usr/local/rvm/gems/ruby-1.9.3-p392/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+    59: 		      		<% if @reference.get_attributes_not_set.empty? %>
+    60: 		      			<span class="text-muted">All attributes have been set!</span>
+    61: 		      		<% end %>
+    62: 			       	<%= render "attributes_form", { reference: @reference, attributes: @reference.get_attributes_not_set } if !@reference.get_attributes_not_set.empty? %>
+    63: 		      	</div>
+    64: 		    </div>
+    65: 	  	</div>
+  app/views/references/show.html.erb:62:in `_app_views_references_show_html_erb___957730937442680213_2161782260'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/references/2" for 127.0.0.1 at 2014-04-01 09:40:10 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 2]]
+  [1m[35mReferenceAttribute Load (0.1ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  Rendered references/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (Missing partial references/attributes_form, application/attributes_form with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/kalle/Desktop/dream-team/app/views"
+  * "/usr/local/rvm/gems/ruby-1.9.3-p392/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+    59: 		      		<% if @reference.get_attributes_not_set.empty? %>
+    60: 		      			<span class="text-muted">All attributes have been set!</span>
+    61: 		      		<% end %>
+    62: 			       	<%= render "attributes_form", { reference: @reference, attributes: @reference.get_attributes_not_set } if !@reference.get_attributes_not_set.empty? %>
+    63: 		      	</div>
+    64: 		    </div>
+    65: 	  	</div>
+  app/views/references/show.html.erb:62:in `_app_views_references_show_html_erb___957730937442680213_2161108100'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (31.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p392/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (41.2ms)
+
+
+Started GET "/references/2" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered references/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:40:39 +0300
+
+
+Started GET "/references/2/edit" for 127.0.0.1 at 2014-04-01 09:40:41 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered references/_edit_reference_form.html.erb (1.8ms)
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 2]]
+  [1m[35mReferenceAttribute Load (0.1ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (0.6ms)
+  Rendered references/_edit_attributes_form.html.erb (2.0ms)
+  Rendered references/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/references/2/edit" for 127.0.0.1 at 2014-04-01 09:41:50 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered references/_edit_reference_form.html.erb (1.6ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 2]]
+  [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (0.7ms)
+  Rendered references/_edit_attributes_form.html.erb (6.9ms)
+  Rendered references/edit.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 35ms (Views: 25.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:41:50 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:41:50 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:41:50 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:41:50 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:41:51 +0300
+
+
+Started POST "/reference_attributes" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+Processing by ReferenceAttributesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fpMCk06OtGj6bKDQZNgf4yx3ou/ScsNr2MGysjT8q0c=", "reference_attribute"=>{"reference_id"=>"2", "name"=>"month", "value"=>"tammikuu"}, "commit"=>"Add"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mReferenceAttribute Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'month' AND "reference_attributes"."reference_id" = 2) LIMIT 1[0m
+  [1m[35mSQL (4.1ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "reference_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 01 Apr 2014 06:42:00 UTC +00:00], ["name", "month"], ["reference_id", 2], ["updated_at", Tue, 01 Apr 2014 06:42:00 UTC +00:00], ["value", "tammikuu"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/references/2/edit
+Completed 302 Found in 16ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/references/2/edit" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered references/_edit_reference_form.html.erb (1.5ms)
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 2]]
+  [1m[35mReferenceAttribute Load (0.3ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (0.7ms)
+  Rendered references/_edit_attributes_form.html.erb (3.3ms)
+  Rendered references/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:42:00 +0300
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:42:53 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.3ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/references/2" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+Processing by ReferencesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fpMCk06OtGj6bKDQZNgf4yx3ou/ScsNr2MGysjT8q0c=", "reference"=>{"name"=>"kirja5"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mReference Load (0.3ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReference Exists (0.2ms)[0m  SELECT 1 AS one FROM "references" WHERE ("references"."name" = 'kirja5' AND "references"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "references" SET "name" = ?, "updated_at" = ? WHERE "references"."id" = 2[0m  [["name", "kirja5"], ["updated_at", Tue, 01 Apr 2014 06:43:14 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/references/2
+Completed 302 Found in 12ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/references/2" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered references/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:43:14 +0300
+
+
+Started GET "/references/2" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  Rendered references/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:45:52 +0300
+
+
+Started GET "/references/2/edit" for 127.0.0.1 at 2014-04-01 09:45:59 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered references/_edit_reference_form.html.erb (2.0ms)
+  [1m[36mReferenceAttribute Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 2]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (0.7ms)
+  Rendered references/_edit_attributes_form.html.erb (2.9ms)
+  Rendered references/edit.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/reference_attributes" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+Processing by ReferenceAttributesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fpMCk06OtGj6bKDQZNgf4yx3ou/ScsNr2MGysjT8q0c=", "reference_attribute"=>{"reference_id"=>"2", "name"=>"address", "value"=>"jokutie 6"}, "commit"=>"Add"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReferenceAttribute Exists (0.2ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'address' AND "reference_attributes"."reference_id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "reference_id", "updated_at", "value") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 01 Apr 2014 06:46:13 UTC +00:00], ["name", "address"], ["reference_id", 2], ["updated_at", Tue, 01 Apr 2014 06:46:13 UTC +00:00], ["value", "jokutie 6"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/references/2/edit
+Completed 302 Found in 13ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/references/2/edit" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReference Load (0.3ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered references/_edit_reference_form.html.erb (1.6ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 2]]
+  [1m[36mReferenceAttribute Load (0.1ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (0.7ms)
+  Rendered references/_edit_attributes_form.html.erb (2.5ms)
+  Rendered references/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:46:13 +0300
+
+
+Started PATCH "/references/2" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+Processing by ReferencesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fpMCk06OtGj6bKDQZNgf4yx3ou/ScsNr2MGysjT8q0c=", "reference"=>{"name"=>"kirja6"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mReference Load (0.3ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReference Exists (0.1ms)[0m  SELECT 1 AS one FROM "references" WHERE ("references"."name" = 'kirja6' AND "references"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "references" SET "name" = ?, "updated_at" = ? WHERE "references"."id" = 2[0m  [["name", "kirja6"], ["updated_at", Tue, 01 Apr 2014 06:47:52 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/references/2/edit
+Completed 302 Found in 15ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/references/2/edit" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReference Load (0.3ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered references/_edit_reference_form.html.erb (1.5ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 2]]
+  [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  Rendered references/_add_attributes_form.html.erb (0.7ms)
+  Rendered references/_edit_attributes_form.html.erb (6.9ms)
+  Rendered references/edit.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:52 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:53 +0300
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:48:03 +0300
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.3ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:48:11 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.4ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/references/1" for 127.0.0.1 at 2014-04-01 09:48:12 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mReferenceAttribute Load (0.2ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  Rendered references/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:48:14 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReference Load (0.3ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered references/_edit_reference_form.html.erb (1.9ms)
+  [1m[36mReferenceAttribute Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 1]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  Rendered references/_edit_attributes_form.html.erb (1.6ms)
+  Rendered references/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:48:30 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.3ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:49:12 +0300
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.2ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/references/7" for 127.0.0.1 at 2014-04-01 09:49:14 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references/7/edit" for 127.0.0.1 at 2014-04-01 09:49:16 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered references/_edit_reference_form.html.erb (1.7ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 7]]
+  [1m[36mReferenceAttribute Load (0.1ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  Rendered references/_add_attributes_form.html.erb (0.8ms)
+  Rendered references/_edit_attributes_form.html.erb (2.6ms)
+  Rendered references/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/references/7/edit" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered references/_edit_reference_form.html.erb (1.1ms)
+  [1m[36mReferenceAttribute Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 7]]
+  [1m[35mReferenceAttribute Load (0.1ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/_add_attributes_form.html.erb (0.7ms)
+  Rendered references/_edit_attributes_form.html.erb (2.4ms)
+  Rendered references/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:21 +0300
+
+
+Started GET "/references/7" for 127.0.0.1 at 2014-04-01 09:51:30 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/references/7" for 127.0.0.1 at 2014-04-01 09:51:42 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references/7/edit" for 127.0.0.1 at 2014-04-01 09:51:44 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered references/_edit_reference_form.html.erb (2.1ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 7]]
+  [1m[36mReferenceAttribute Load (0.1ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  Rendered references/_add_attributes_form.html.erb (0.6ms)
+  Rendered references/_edit_attributes_form.html.erb (2.2ms)
+  Rendered references/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/references/7/edit" for 127.0.0.1 at 2014-04-01 09:51:57 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered references/_edit_reference_form.html.erb (1.2ms)
+  [1m[36mReferenceAttribute Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 7]]
+  [1m[35mReferenceAttribute Load (0.1ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/_add_attributes_form.html.erb (0.7ms)
+  Rendered references/_edit_attributes_form.html.erb (2.4ms)
+  Rendered references/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:51:58 +0300
+
+
+Started GET "/references/7/edit" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  Rendered references/_edit_reference_form.html.erb (1.2ms)
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1  [["reference_id", 7]]
+  [1m[36mReferenceAttribute Load (0.1ms)[0m  [1mSELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  Rendered references/_add_attributes_form.html.erb (0.6ms)
+  Rendered references/_edit_attributes_form.html.erb (2.0ms)
+  Rendered references/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:11 +0300
+
+
+Started GET "/references/7/edit" for 127.0.0.1 at 2014-04-01 09:52:19 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered references/_edit_reference_form.html.erb (1.1ms)
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 7]]
+  [1m[35mReferenceAttribute Load (0.1ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/_add_attributes_form.html.erb (0.6ms)
+  Rendered references/_edit_attributes_form.html.erb (2.1ms)
+  Rendered references/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:52:20 +0300
+
+
+Started GET "/references/7" for 127.0.0.1 at 2014-04-01 09:52:22 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references/7" for 127.0.0.1 at 2014-04-01 09:52:32 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  Rendered references/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/references" for 127.0.0.1 at 2014-04-01 09:52:36 +0300
+Processing by ReferencesController#index as HTML
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  Rendered references/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/references/1/edit" for 127.0.0.1 at 2014-04-01 09:52:39 +0300
+Processing by ReferencesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mReference Load (0.1ms)[0m  SELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered references/_edit_reference_form.html.erb (1.8ms)
+  [1m[36mReferenceAttribute Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ? LIMIT 1[0m  [["reference_id", 1]]
+  [1m[35mReferenceAttribute Load (0.3ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  Rendered references/_edit_attributes_form.html.erb (1.8ms)
+  Rendered references/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/references/1" for 127.0.0.1 at 2014-04-01 09:52:46 +0300
+Processing by ReferencesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReference Load (0.1ms)[0m  [1mSELECT "references".* FROM "references" WHERE "references"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mReferenceAttribute Load (0.2ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  Rendered references/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.3ms)
