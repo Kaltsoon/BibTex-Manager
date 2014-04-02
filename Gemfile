@@ -54,6 +54,8 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov', require: false
+  gem "selenium-webdriver"
+  gem "database_cleaner", "< 1.1.0"
 end
 
 # Use ActiveModel has_secure_password

@@ -47,7 +47,7 @@
 	<% @article_required_attributes.each do |attribute| %>
 	<div class="form-group">
 		<%= label_tag attribute %>
-		<%= text_field_tag "attribute[#{attribute}]", "", class: "form-control", required: true %>
+		<%= text_field_tag "attribute[#{attribute}]", "", class: "form-control" %>
 	</div>
 	<% end %>
 </div>
@@ -55,7 +55,7 @@
 	<% @inproceedings_required_attributes.each do |attribute| %>
 	<div class="form-group">
 		<%= label_tag attribute %>
-		<%= text_field_tag "attribute[#{attribute}]", "", class: "form-control", required: true %>
+		<%= text_field_tag "attribute[#{attribute}]", "", class: "form-control" %>
 	</div>
 	<% end %>
 </div>
