@@ -33,3 +33,346 @@
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mReference Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = 'kirja1' LIMIT 1[0m
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:02:36 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 3379ms (Views: 3336.2ms | ActiveRecord: 2.6ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:02:40 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>""}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:02:40 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:02:40 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>"nimi"}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mReference Exists (2.4ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = 'Kirja' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReference Exists (2.3ms)[0m  SELECT 1 AS one FROM "references" WHERE "references"."name" = '' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (160.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:19:23 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (415.2ms)
+Completed 200 OK in 3996ms (Views: 3321.2ms | ActiveRecord: 142.5ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:19:28 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>""}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (61.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:19:28 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:19:28 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>"nimi"}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.2ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (518.9ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["name", "author"], ["updated_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["name", "title"], ["updated_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["name", "publisher"], ["updated_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["name", "year"], ["updated_at", Wed, 02 Apr 2014 07:19:29 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."id" != 1 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."id" != 2 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."id" != 3 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."id" != 4 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReference Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = 'Kirja' LIMIT 1[0m
+  [1m[35m (123.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReference Exists (187.3ms)[0m  SELECT 1 AS one FROM "references" WHERE "references"."name" = '' LIMIT 1
+  [1m[36m (25.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mReference Exists (2.5ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = '' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (2.2ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (32.4ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["name", "author"], ["updated_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["name", "title"], ["updated_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["name", "publisher"], ["updated_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["name", "year"], ["updated_at", Wed, 02 Apr 2014 07:31:31 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."id" != 1 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."id" != 2 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."id" != 3 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."id" != 4 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReference Exists (0.1ms)[0m  SELECT 1 AS one FROM "references" WHERE "references"."name" = 'Kirja' LIMIT 1
+  [1m[36m (2.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:31:31 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 498ms (Views: 469.8ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:31:32 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>""}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:31:32 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:31:32 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>"nimi"}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:32:33 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 203ms (Views: 163.3ms | ActiveRecord: 2.7ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:32:33 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:32:33 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>"nimi"}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (2.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (10.7ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["name", "author"], ["updated_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["name", "title"], ["updated_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["name", "publisher"], ["updated_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["name", "year"], ["updated_at", Wed, 02 Apr 2014 07:32:33 UTC +00:00], ["value", "val"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."id" != 1 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."id" != 2 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."id" != 3 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.0ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."id" != 4 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReference Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = 'Kirja' LIMIT 1[0m
+  [1m[35m (2.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mReference Exists (3.3ms)[0m  SELECT 1 AS one FROM "references" WHERE "references"."name" = '' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:32:58 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 191ms (Views: 148.4ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:32:58 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:32:58 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>"nimi"}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mReference Exists (2.8ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (2.3ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (7.9ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["name", "author"], ["updated_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["name", "title"], ["updated_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["name", "publisher"], ["updated_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["name", "year"], ["updated_at", Wed, 02 Apr 2014 07:32:59 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."id" != 1 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."id" != 2 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."id" != 3 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."id" != 4 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReference Exists (0.0ms)[0m  SELECT 1 AS one FROM "references" WHERE "references"."name" = 'Kirja' LIMIT 1
+  [1m[36m (3.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mReference Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = '' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (2.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (10.7ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["name", "author"], ["updated_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["name", "title"], ["updated_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["name", "publisher"], ["updated_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["name", "year"], ["updated_at", Wed, 02 Apr 2014 07:33:58 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."id" != 1 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."id" != 2 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."id" != 3 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."id" != 4 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReference Exists (0.1ms)[0m  SELECT 1 AS one FROM "references" WHERE "references"."name" = 'Kirja' LIMIT 1
+  [1m[36m (2.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:33:58 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 170ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:33:59 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>"nimi"}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:33:59 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:33:59 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>""}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 2ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:37:16 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 203ms (Views: 172.7ms | ActiveRecord: 2.2ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:37:16 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>""}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 2ms
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/references/new" for 127.0.0.1 at 2014-04-02 10:37:16 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/references" for 127.0.0.1 at 2014-04-02 10:37:16 +0300
+Processing by ReferencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "reference"=>{"ref_type"=>"book", "name"=>"nimi"}, "commit"=>"Create Reference"}
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mReference Exists (1.9ms)[0m  [1mSELECT 1 AS one FROM "references" WHERE "references"."name" = '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (2.2ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (9.1ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["name", "author"], ["updated_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["name", "title"], ["updated_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["name", "publisher"], ["updated_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "reference_attributes" ("created_at", "name", "updated_at", "value") VALUES (?, ?, ?, ?)  [["created_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["name", "year"], ["updated_at", Wed, 02 Apr 2014 07:37:16 UTC +00:00], ["value", "val"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'author' AND "reference_attributes"."id" != 1 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'title' AND "reference_attributes"."id" != 2 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReferenceAttribute Exists (0.1ms)[0m  SELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'publisher' AND "reference_attributes"."id" != 3 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1
+  [1m[36mReferenceAttribute Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "reference_attributes" WHERE ("reference_attributes"."name" = 'year' AND "reference_attributes"."id" != 4 AND "reference_attributes"."reference_id" IS NULL) LIMIT 1[0m
+  [1m[35mReference Exists (0.0ms)[0m  SELECT 1 AS one FROM "references" WHERE "references"."name" = 'Kirja' LIMIT 1
+  [1m[36m (5.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
