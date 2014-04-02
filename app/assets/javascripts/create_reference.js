@@ -1,6 +1,5 @@
 
 var ready = function(){
-	$("#submit_reference").removeAttr("disabled");
 	manage_attribute_form();
 	$("#reference_ref_type").change(function(){
 		manage_attribute_form();
