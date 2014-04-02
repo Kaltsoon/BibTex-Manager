@@ -28,11 +28,9 @@ class ReferencesController < ApplicationController
   # POST /references.json
   def create
     @reference = Reference.new(reference_params)
+    @attributes = params.require(:attribute)
+    add_attributes(@reference, @attributes)
     if @reference.save
-      @attributes=params.require(:attribute)
-      @attributes.each do |key, value|
-        ReferenceAttribute.create(reference_id: @reference.id, name: key, value: value)
-      end
       redirect_to @reference, notice: "Reference was successfully created"
     else
       render action: "new"
@@ -71,11 +69,18 @@ class ReferencesController < ApplicationController
 
   private
 
+    def add_attributes(reference, attributes)
+      attributes.each do |key, value|
+          attribute = ReferenceAttribute.new(name: key, value: value)
+          reference.reference_attributes.push(attribute)
+      end
+    end
+
     def set_types
-      @book_required_attributes = BookReference.required_attributes
-      @article_required_attributes = ArticleReference.required_attributes
-      @inproceedings_required_attributes = InproceedingsReference.required_attributes
-      @ref_types = ["book", "inproceedings", "article"]
+      @book_required_attributes = BookReference.get_required_attributes
+      @article_required_attributes = ArticleReference.get_required_attributes
+      @inproceedings_required_attributes = InproceedingsReference.get_required_attributes
+      @ref_types = Reference.get_available_types
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_reference
