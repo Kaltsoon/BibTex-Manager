@@ -22,7 +22,7 @@ class Reference < ActiveRecord::Base
 	end
 
 	def self.get_available_types
-		return ["book", "article", "proceedings"]
+		return ["book", "article", "inproceedings"]
 	end
 
 	private
