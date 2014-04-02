@@ -3,7 +3,7 @@ require "spec_helper"
 include BibtexGenerator
 
 describe "BibtexGenerator" do
-	it "generator valid bibtex without scandic letters string" do
+	it "generates valid bibtex string without scandic letters in attributes" do
 		reference = Reference.new(name: "Kirja", ref_type: "book")
 	    reference.reference_attributes = [FactoryGirl.create(:reference_attribute, name:"author", value: "kalle ilves"), 
 	      FactoryGirl.create(:reference_attribute, name:"title", value: "kallen kokkikirja"),
