@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/environment.rb": [
+      "/Users/kalle/Desktop/dream-team/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/application.rb": [
+      "/Users/kalle/Desktop/dream-team/config/application.rb": [
         1,
         null,
         1,
@@ -34,13 +34,13 @@
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/boot.rb": [
+      "/Users/kalle/Desktop/dream-team/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/environments/test.rb": [
+      "/Users/kalle/Desktop/dream-team/config/environments/test.rb": [
         1,
         null,
         null,
@@ -78,7 +78,7 @@
         1,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/initializers/backtrace_silencers.rb": [
+      "/Users/kalle/Desktop/dream-team/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -87,13 +87,13 @@
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/initializers/filter_parameter_logging.rb": [
+      "/Users/kalle/Desktop/dream-team/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/initializers/inflections.rb": [
+      "/Users/kalle/Desktop/dream-team/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -111,14 +111,14 @@
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/initializers/mime_types.rb": [
+      "/Users/kalle/Desktop/dream-team/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/initializers/secret_token.rb": [
+      "/Users/kalle/Desktop/dream-team/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -132,12 +132,12 @@
         null,
         1
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/initializers/session_store.rb": [
+      "/Users/kalle/Desktop/dream-team/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/initializers/wrap_parameters.rb": [
+      "/Users/kalle/Desktop/dream-team/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -153,7 +153,7 @@
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/spec/factories.rb": [
+      "/Users/kalle/Desktop/dream-team/spec/factories.rb": [
         1,
         1,
         1,
@@ -168,7 +168,7 @@
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/config/routes.rb": [
+      "/Users/kalle/Desktop/dream-team/config/routes.rb": [
         1,
         1,
         null,
@@ -231,26 +231,55 @@
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/app/helpers/application_helper.rb": [
+      "/Users/kalle/Desktop/dream-team/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/app/helpers/reference_attributes_helper.rb": [
+      "/Users/kalle/Desktop/dream-team/app/helpers/reference_attributes_helper.rb": [
         1,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/app/helpers/references_helper.rb": [
+      "/Users/kalle/Desktop/dream-team/app/helpers/references_helper.rb": [
         1,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/spec/models/reference_attribute_spec.rb": [
+      "/Users/kalle/Desktop/dream-team/spec/features/reference_page_spec.rb": [
         1,
         null,
         1,
+<<<<<<< HEAD
+        null,
+        1,
+=======
+>>>>>>> 59237d070843721b3b3f4630ddae3e3c90bb0b59
+        1,
+        1,
+        null,
+        null,
+        null,
+<<<<<<< HEAD
+        null,
+        5,
+        1,
+        1,
+        1,
+        null,
+=======
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+>>>>>>> 59237d070843721b3b3f4630ddae3e3c90bb0b59
         null,
         1,
         1,
         1,
+<<<<<<< HEAD
         null,
         null,
         null,
@@ -260,42 +289,105 @@
         1,
         1,
         null,
+=======
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+>>>>>>> 59237d070843721b3b3f4630ddae3e3c90bb0b59
         null,
         1,
         1,
         1,
+<<<<<<< HEAD
         null,
         null,
         null,
         null,
         5,
         1,
+=======
         1,
+        1,
+        null,
+        1,
+        null,
         1,
         null,
         null,
         1,
-        1,
-        1,
+        2,
         null,
         null,
-        null,
-        null,
-        5,
-        1,
+>>>>>>> 59237d070843721b3b3f4630ddae3e3c90bb0b59
         1,
         1,
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/app/models/reference_attribute.rb": [
+      "/Users/kalle/Desktop/dream-team/spec/lib/bibtex_generator_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/kalle/Desktop/dream-team/lib/bibtex_generator.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/kalle/Desktop/dream-team/spec/models/reference_attribute_spec.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/kalle/Desktop/dream-team/app/models/reference_attribute.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/spec/models/reference_spec.rb": [
+      "/Users/kalle/Desktop/dream-team/spec/models/reference_spec.rb": [
         1,
         null,
         1,
@@ -381,7 +473,7 @@
         null,
         null
       ],
-      "/cs/fs2/home/trantane/Desktop/dream-team/app/models/reference.rb": [
+      "/Users/kalle/Desktop/dream-team/app/models/reference.rb": [
         1,
         1,
         1,
@@ -430,6 +522,7 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/cs/fs2/home/trantane/Desktop/dream-team/app/models/book_reference.rb": [
         1,
         1,
@@ -470,6 +563,48 @@
         null
       ],
       "/cs/fs2/home/trantane/Desktop/dream-team/app/controllers/references_controller.rb": [
+=======
+      "/Users/kalle/Desktop/dream-team/app/models/book_reference.rb": [
+>>>>>>> 59237d070843721b3b3f4630ddae3e3c90bb0b59
+        1,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        9,
+        null,
+        null
+      ],
+      "/Users/kalle/Desktop/dream-team/app/models/article_reference.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null
+      ],
+      "/Users/kalle/Desktop/dream-team/app/models/inproceedings_reference.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null
+      ],
+      "/Users/kalle/Desktop/dream-team/app/controllers/references_controller.rb": [
         1,
         1,
         null,
@@ -479,7 +614,7 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         null,
@@ -534,9 +669,9 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -565,6 +700,7 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/cs/fs2/home/trantane/Desktop/dream-team/app/controllers/application_controller.rb": [
         1,
         null,
@@ -674,5 +810,16 @@
       ]
     },
     "timestamp": 1396513302
+=======
+      "/Users/kalle/Desktop/dream-team/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1396452581
+>>>>>>> 59237d070843721b3b3f4630ddae3e3c90bb0b59
   }
 }
