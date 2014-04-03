@@ -1,5 +1,5 @@
 Bibtex::Application.routes.draw do
-  resources :reference_attributes
+  resources :reference_attributes, only: [:create, :update, :destroy]
 
   resources :references
 

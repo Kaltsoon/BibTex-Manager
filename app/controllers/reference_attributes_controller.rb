@@ -1,26 +1,6 @@
 class ReferenceAttributesController < ApplicationController
   before_action :set_reference_attribute, only: [:show, :edit, :update, :destroy]
 
-  # GET /reference_attributes
-  # GET /reference_attributes.json
-  def index
-    @reference_attributes = ReferenceAttribute.all
-  end
-
-  # GET /reference_attributes/1
-  # GET /reference_attributes/1.json
-  def show
-  end
-
-  # GET /reference_attributes/new
-  def new
-    @reference_attribute = ReferenceAttribute.new
-  end
-
-  # GET /reference_attributes/1/edit
-  def edit
-  end
-
   # POST /reference_attributes
   # POST /reference_attributes.json
   def create

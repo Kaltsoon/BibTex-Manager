@@ -21,7 +21,6 @@ describe "Reference page" do
         fill_in('attribute_publisher', with:'pu')
         fill_in('attribute_year', with:'1234')
       }
-      save_and_open_page
       click_button("submit_reference") 
     
       expect(page).to have_content 'error prohibited this reference from being saved'
@@ -43,7 +42,7 @@ describe "Reference page" do
       expect(page).to have_content 'Reference was successfully created'
   end
 
-  it "add new attributes saved alĺ type reference", js:true do
+  it "add new attributes saved all type reference", js:true do
     Reference.get_available_types.each do |type|
       visit new_reference_path
 
