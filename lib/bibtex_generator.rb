@@ -3,8 +3,10 @@ module BibtexGenerator
 
 	def generate_bibtex_string(references)
 		bibtex_file = ""
+		i = 0
 		references.each do |reference|
-			bibtex_file += generate_bibtex_for_reference(reference) + "\n"
+			bibtex_file += generate_bibtex_for_reference(reference) + (i<(references.count-1) ? "\n\n" : "")
+			i += 1
 		end
 		return bibtex_file
 	end
@@ -13,7 +15,7 @@ module BibtexGenerator
 		bibtex = "@" + reference.ref_type + "{" + reference.name + ",\n"
 		i = 0
 		reference.reference_attributes.each do |ref_att|
-			bibtex += ref_att.name + " = " + "{" + ref_att.value + "}"+ (i<(reference.reference_attributes.count-1) ? "," : "") + "\n"
+			bibtex += "\t" + ref_att.name + " = " + "{" + ref_att.value + "}"+ (i<(reference.reference_attributes.count-1) ? "," : "") + "\n"
 			i += 1
 		end
 		bibtex += "}"

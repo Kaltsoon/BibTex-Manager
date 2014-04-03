@@ -47719,3 +47719,440 @@ Processing by ReferencesController#edit as HTML
   Rendered references/edit.html.erb within layouts/application (40.6ms)
 Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.6ms)
 >>>>>>> 59237d070843721b3b3f4630ddae3e3c90bb0b59
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-03 19:25:04 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReferencesController#index as HTML
+  [1m[35mReference Load (0.3ms)[0m  SELECT "references".* FROM "references"
+  Rendered references/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 2133ms (Views: 2115.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-04-03 19:25:07 +0300
+
+
+Started GET "/download_bibtex" for 127.0.0.1 at 2014-04-03 19:25:46 +0300
+Processing by ReferencesController#download_bibtex as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from download_bibtex at /Users/henrikorpela/Desktop/dream-team/app/controllers/references_controller.rb:65)
+  [1m[36mReference Load (0.3ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  [1m[35mReferenceAttribute Load (0.4ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" IN (1, 2, 3, 4, 6, 7, 9, 10, 11, 12)
+  [1m[36m (5.2ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  Rendered text template (0.0ms)
+Sent data bitext.bib (2.3ms)
+Completed 200 OK in 131ms (Views: 2.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/download_bibtex" for 127.0.0.1 at 2014-04-03 19:25:47 +0300
+Processing by ReferencesController#download_bibtex as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from download_bibtex at /Users/henrikorpela/Desktop/dream-team/app/controllers/references_controller.rb:65)
+  [1m[36mReference Load (0.4ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  [1m[35mReferenceAttribute Load (0.5ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" IN (1, 2, 3, 4, 6, 7, 9, 10, 11, 12)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  Rendered text template (0.0ms)
+Sent data bitext.bib (0.4ms)
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/download_bibtex" for 127.0.0.1 at 2014-04-03 19:26:36 +0300
+Processing by ReferencesController#download_bibtex as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from download_bibtex at /Users/henrikorpela/Desktop/dream-team/app/controllers/references_controller.rb:65)
+  [1m[36mReference Load (0.4ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  [1m[35mReferenceAttribute Load (0.4ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" IN (1, 2, 3, 4, 6, 7, 9, 10, 11, 12)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  Rendered text template (0.0ms)
+Sent data bitext.bib (0.7ms)
+Completed 200 OK in 47ms (Views: 0.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/download_bibtex" for 127.0.0.1 at 2014-04-03 19:26:36 +0300
+Processing by ReferencesController#download_bibtex as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from download_bibtex at /Users/henrikorpela/Desktop/dream-team/app/controllers/references_controller.rb:65)
+  [1m[36mReference Load (0.2ms)[0m  [1mSELECT "references".* FROM "references"[0m
+  [1m[35mReferenceAttribute Load (0.4ms)[0m  SELECT "reference_attributes".* FROM "reference_attributes" WHERE "reference_attributes"."reference_id" IN (1, 2, 3, 4, 6, 7, 9, 10, 11, 12)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?[0m  [["reference_id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reference_attributes" WHERE "reference_attributes"."reference_id" = ?  [["reference_id", 12]]
+  Rendered text template (0.0ms)
+Sent data bitext.bib (0.4ms)
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/references/new" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+Processing by ReferencesController#new as HTML
+  Rendered references/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/reference_attributes.css?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/references.css?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/site.css?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/edit_reference.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/create_reference.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/reference_attributes.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/references.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-03 20:12:00 +0300

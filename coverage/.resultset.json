@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kalle/Desktop/dream-team/config/environment.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/kalle/Desktop/dream-team/config/application.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/application.rb": [
         1,
         null,
         1,
@@ -34,13 +34,13 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/config/boot.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/kalle/Desktop/dream-team/config/environments/test.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/environments/test.rb": [
         1,
         null,
         null,
@@ -78,7 +78,7 @@
         1,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/config/initializers/backtrace_silencers.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -87,13 +87,13 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/config/initializers/filter_parameter_logging.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/kalle/Desktop/dream-team/config/initializers/inflections.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -111,14 +111,14 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/config/initializers/mime_types.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/config/initializers/secret_token.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -132,12 +132,12 @@
         null,
         1
       ],
-      "/Users/kalle/Desktop/dream-team/config/initializers/session_store.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/kalle/Desktop/dream-team/config/initializers/wrap_parameters.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -153,7 +153,7 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/spec/factories.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/spec/factories.rb": [
         1,
         1,
         1,
@@ -168,7 +168,7 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/config/routes.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/config/routes.rb": [
         1,
         1,
         null,
@@ -231,19 +231,19 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/helpers/application_helper.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/helpers/reference_attributes_helper.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/helpers/reference_attributes_helper.rb": [
         1,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/helpers/references_helper.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/helpers/references_helper.rb": [
         1,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/spec/features/reference_page_spec.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/spec/features/reference_page_spec.rb": [
         1,
         null,
         1,
@@ -268,7 +268,6 @@
         1,
         null,
         1,
-        1,
         null,
         1,
         null,
@@ -353,7 +352,7 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/spec/lib/bibtex_generator_spec.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/spec/lib/bibtex_generator_spec.rb": [
         1,
         null,
         1,
@@ -367,34 +366,54 @@
         null,
         1,
         null,
-        null
-      ],
-      "/Users/kalle/Desktop/dream-team/lib/bibtex_generator.rb": [
         1,
         1,
         null,
-        1,
-        2,
-        2,
-        1,
-        null,
-        2,
         null,
         null,
         1,
-        1,
-        1,
-        1,
-        4,
-        4,
         null,
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/spec/models/reference_attribute_spec.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/lib/bibtex_generator.rb": [
+        1,
+        1,
+        null,
+        1,
+        4,
+        4,
+        4,
+        3,
+        3,
+        null,
+        4,
+        null,
+        null,
+        1,
+        3,
+        3,
+        3,
+        12,
+        12,
+        null,
+        3,
+        3,
+        null,
+        null,
+        null
+      ],
+      "/Users/henrikorpela/Desktop/dream-team/spec/models/reference_attribute_spec.rb": [
         1,
         null,
         1,
@@ -439,14 +458,14 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/models/reference_attribute.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/models/reference_attribute.rb": [
         1,
         1,
-        1,
+        null,
         1,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/spec/models/reference_spec.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/spec/models/reference_spec.rb": [
         1,
         null,
         1,
@@ -532,7 +551,7 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/models/reference.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/models/reference.rb": [
         1,
         1,
         1,
@@ -549,7 +568,7 @@
         null,
         null,
         1,
-        16,
+        19,
         null,
         null,
         1,
@@ -557,19 +576,19 @@
         null,
         null,
         1,
-        33,
+        36,
         null,
         null,
         1,
         null,
         1,
-        13,
+        16,
         0,
         null,
         null,
         null,
         1,
-        61,
+        76,
         1,
         null,
         null,
@@ -581,7 +600,7 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/controllers/references_controller.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/controllers/references_controller.rb": [
         1,
         1,
         null,
@@ -677,14 +696,14 @@
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/controllers/application_controller.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/models/book_reference.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/models/book_reference.rb": [
         1,
         1,
         null,
@@ -693,11 +712,11 @@
         null,
         null,
         1,
-        30,
+        31,
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/models/article_reference.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/models/article_reference.rb": [
         1,
         1,
         null,
@@ -706,11 +725,11 @@
         null,
         null,
         1,
-        19,
+        20,
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/models/inproceedings_reference.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/models/inproceedings_reference.rb": [
         1,
         1,
         null,
@@ -719,11 +738,11 @@
         null,
         null,
         1,
-        19,
+        20,
         null,
         null
       ],
-      "/Users/kalle/Desktop/dream-team/app/controllers/reference_attributes_controller.rb": [
+      "/Users/henrikorpela/Desktop/dream-team/app/controllers/reference_attributes_controller.rb": [
         1,
         1,
         null,
@@ -779,6 +798,6 @@
         null
       ]
     },
-    "timestamp": 1396517126
+    "timestamp": 1396547635
   }
 }
