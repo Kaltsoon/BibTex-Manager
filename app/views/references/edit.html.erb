@@ -1,5 +1,5 @@
 <div class="page-header button-header">
-  <h1>Edit reference</h1>
+  <h1>Edit <%= @reference.name %> <small><%= @reference.ref_type %></small></h1>
   <div class="pull-right">
   	<%= link_to raw("<i class='fa fa-eye'></i> Show reference"), reference_path(@reference), class: "btn btn-default" %>
   </div>

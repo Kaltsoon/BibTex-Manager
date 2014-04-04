@@ -22,7 +22,7 @@
  	<h2>Basic information</h2>
 	<div class="form-group">
 	    <%= label_tag "type" %>
-	    <%= select_tag "reference[ref_type]", options_for_select(@ref_types, @ref_types.first), class: "form-control" %>
+	    <%= select_tag "reference[ref_type]", options_for_select(@ref_types, @reference.ref_type), class: "form-control" %>
 	</div>
 	<div class="form-group">
 	    <%= label_tag "name" %>
@@ -39,7 +39,7 @@
 	<% @book_required_attributes.each do |attribute| %>
 	<div class="form-group">
 		<%= label_tag attribute %>
-		<%= text_field_tag "attribute[#{attribute}]", "", class: "form-control" %>
+		<%= text_field_tag "attribute[#{attribute}]", @attributes[attribute], class: "form-control" %>
 	</div>
 	<% end %>
 </div>
@@ -47,7 +47,7 @@
 	<% @article_required_attributes.each do |attribute| %>
 	<div class="form-group">
 		<%= label_tag attribute %>
-		<%= text_field_tag "attribute[#{attribute}]", "", class: "form-control" %>
+		<%= text_field_tag "attribute[#{attribute}]", @attributes[attribute], class: "form-control" %>
 	</div>
 	<% end %>
 </div>
@@ -55,7 +55,7 @@
 	<% @inproceedings_required_attributes.each do |attribute| %>
 	<div class="form-group">
 		<%= label_tag attribute %>
-		<%= text_field_tag "attribute[#{attribute}]", "", class: "form-control" %>
+		<%= text_field_tag "attribute[#{attribute}]", @attributes[attribute], class: "form-control" %>
 	</div>
 	<% end %>
 </div>

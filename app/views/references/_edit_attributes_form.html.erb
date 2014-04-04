@@ -9,9 +9,19 @@
 		<% reference.reference_attributes.each do |attribute| %>
 			<tr>
 				<td><%= attribute.name %></td>
-				<td><%= attribute.value %></td>
-				<td><a class="btn btn-default btn-xs"><i class="fa fa-pencil"></i> Edit</a></td>
-				<td><a class="btn btn-danger btn-xs"><i class="fa fa-times"></i> Remove</a></td>
+				<%= form_tag reference_attribute_path(attribute), method: :put do %>
+					<td>
+						<%= text_field_tag "reference_attribute[value]", attribute.value, class: "form-control" %>
+					</td>
+					<td>
+						<%= hidden_field_tag "id", attribute.id %>
+						<%= hidden_field_tag "reference_attribute[reference_id]", reference.id %>
+						<%= submit_tag "Save", class: "btn btn-primary btn-xs" %>
+					</td>
+				<% end %>
+				<td>
+					<%= link_to raw("<i class='fa fa-times'></i> Remove"), attribute, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" unless reference.has_required_attribute?(attribute) %>
+				</td>
 			</tr>
 		<% end %>
 	</tbody>

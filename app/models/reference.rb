@@ -1,9 +1,15 @@
 class Reference < ActiveRecord::Base
+	include BibtexGenerator
+
 	has_many :reference_attributes, dependent: :destroy
 	validates :name, uniqueness: true, presence: true
 	validates :ref_type, presence: true
 	validate :reference_attributes, :validate_required_attributes
 	validate :ref_type, :validate_type
+
+	def get_bibtex
+		return generate_bibtex_string([self]).gsub(/(?:\n\r?|\r\n?)/, '<br>')
+	end
 
 	def has_required_attribute?(attribute)
 		return "#{ref_type.downcase.capitalize}Reference".constantize.get_required_attributes.include?(attribute.name)

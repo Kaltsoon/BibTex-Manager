@@ -25,3 +25,7 @@
 .hidden{
 	display: none;
 }
+.popover{
+	width: 350px !important;
+	max-width: 350px !important;
+}

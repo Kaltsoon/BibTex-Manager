@@ -4,26 +4,78 @@
     <%= link_to raw("<i class='fa fa-plus'></i> New reference"), new_reference_path, class: "btn btn-success" %>
   </div>
 </div>
-<table>
+<h2>Filter</h2>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+          <span class="text-muted"><i class="fa fa-list"></i></span>
+          <a data-toggle="collapse" data-parent="#accordion" href="#filter-attributes">
+            Options
+          </a>
+      </h4>
+    </div>
+    <div id="filter-attributes" class="panel-collapse collapse">
+      <div class="panel-body">
+         <div class="alert alert-info alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Type in a keyword for filtering the list below
+         </div>
+        <div class="form-group">
+          <input type="text" placeholder="Keyword" class="form-control" id="filter-keyword">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>List</h2>
+<div id="reference-list">
+</div>
+<script id="reference-row-template" type="text/html">
+  <table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Type</th>
       <th>Name</th>
       <th></th>
       <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @references.each do |reference| %>
-      <tr>
-        <td><%= reference.ref_type %></td>
-        <td><%= reference.name %></td>
-        <td><%= link_to 'Show', reference %></td>
-        <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
-        <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    {{#references}}
+    <tr>
+        <td><span class="label label-primary">{{ref_type}}</span></td>
+        <td>
+          <a class="reference-attributes-popover" rel="popover" 
+              data-content="
+                  {{#reference_attributes}}
+                    <p>
+                      <strong>{{name}}</strong> {{value}}
+                    </p>
+                  {{/reference_attributes}}
+                  <div class='btn-group'>
+                    <a href='references/{{id}}/edit' class='btn btn-default btn-sm'>Edit</a>
+                    <a href='references/{{id}}' class='btn btn-default btn-sm'>Show</a>
+                  </div>" 
+              data-placement="right"
+              data-html="true" data-original-title="{{name}}">
+              {{name}}
+          </a>
+        </td>
+        <td><a class="btn btn-default btn-xs reference-bibtex-popover" rel="popover"
+                data-content="
+                  <div class='well well-sm'>
+                    {{get_bibtex}}
+                  </div>" 
+                data-placement="right"
+                data-html="true" data-original-title="Plain BibTex">
+                <i class='fa fa-eye'></i> Show BibTex
+              </a>
+              </td>
+        <td><a href="download_reference/{{id}}" class="btn btn-primary btn-xs"><i class='fa fa-download'></i> Download reference</a></td>
       </tr>
-    <% end %>
+    {{/references}}
   </tbody>
 </table>
+</script>

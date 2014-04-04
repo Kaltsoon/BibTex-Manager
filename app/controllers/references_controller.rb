@@ -13,11 +13,13 @@ class ReferencesController < ApplicationController
   # GET /references/1
   # GET /references/1.json
   def show
+    @bibtex = generate_bibtex_string([@reference]).gsub(/(?:\n\r?|\r\n?)/, '<br>')
   end
 
   # GET /references/new
   def new
     @reference = Reference.new
+    @attributes = {}
   end
 
   # GET /references/1/edit
@@ -61,9 +63,20 @@ class ReferencesController < ApplicationController
     end
   end
 
+  def plain_bibtex
+    references = Reference.includes(:reference_attributes).all
+    @plain_bibtex = generate_bibtex_string(references).gsub(/(?:\n\r?|\r\n?)/, '<br>')
+  end
+
   def download_bibtex
     references = Reference.includes(:reference_attributes).all
     bib = generate_bibtex_string(references)
+    send_data(bib.to_s, filename: "bitext.bib")
+  end
+
+  def download_bibtex_single_reference
+    reference = Reference.find(params[:id])
+    bib = generate_bibtex_string([reference])
     send_data(bib.to_s, filename: "bitext.bib")
   end
 
