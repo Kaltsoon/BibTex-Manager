@@ -35,7 +35,7 @@ class Reference < ActiveRecord::Base
 
 	def validate_type
 		if(not Reference.get_available_types.include?(ref_type))
-			errors.add(:reference_attributes, "reference type is not valid!")
+			errors.add(:ref_type, "reference type is not valid!")
 		end
 	end
 

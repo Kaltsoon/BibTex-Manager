@@ -10,15 +10,15 @@ var REFERENCES_MODULE =
 		});
 	}
 	var filter = function(){
-		var keyword = $("#filter-keyword").val();
+		var keyword = $("#filter-keyword").val().toLowerCase();
 		references = [];
 		if(keyword){
 			references_all.forEach(function(ref){
-				if(ref.name.indexOf(keyword)>=0 || ref.ref_type.indexOf(keyword)>=0){
+				if(ref.name.toLowerCase().indexOf(keyword)>=0 || ref.ref_type.toLowerCase().indexOf(keyword)>=0){
 					references.push(ref);
 				}else{
 					ref.reference_attributes.forEach(function(attribute){
-						if(attribute.value.indexOf(keyword)>=0){
+						if(attribute.value.toLowerCase().indexOf(keyword)>=0){
 							references.push(ref);
 						}
 					});
