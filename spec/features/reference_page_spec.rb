@@ -7,6 +7,7 @@ describe "Reference page" do
   end
 
   before :each do
+
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.start
   end
@@ -31,7 +32,7 @@ describe "Reference page" do
 
     click_button("submit_reference")
 
-    expect(page).to have_content 'error prohibited this reference from being saved'
+    expect(page).to have_content "error prohibited this reference from being saved"
   end
 
   it "saves reference if attributes and name are valid", js:true do

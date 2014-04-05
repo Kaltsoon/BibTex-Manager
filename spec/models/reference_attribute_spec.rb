@@ -12,7 +12,7 @@ describe ReferenceAttribute do
     expect(book_reference.reference_attributes.map{|a| a.name}.include?("edition")).to be(false)
     attribute = ReferenceAttribute.new(name: "edition", value: "test_value")
     book_reference.reference_attributes.push(attribute)
-    expect(book_reference.reference_attributes.where(name: "edition").nil?).to eq(false)
+    expect(book_reference.reference_attributes.where(name: "edition").nil?).to be(false)
   end
 
   it "attribute can be added to a article reference" do
@@ -25,7 +25,7 @@ describe ReferenceAttribute do
     expect(article_reference.reference_attributes.map{|a| a.name}.include?("month")).to be(false)
     attribute = ReferenceAttribute.new(name: "month", value: "test_value")
     article_reference.reference_attributes.push(attribute)
-    expect(article_reference.reference_attributes.where(name: "month").nil?).to eq(false)
+    expect(article_reference.reference_attributes.where(name: "month").nil?).to be(false)
   end
 
   it "attribute can be added to a inproceedings reference" do
@@ -38,6 +38,6 @@ describe ReferenceAttribute do
     expect(inproceedings_reference.reference_attributes.map{|a| a.name}.include?("pages")).to be(false)
     attribute = ReferenceAttribute.new(name: "pages", value: "test_value")
     inproceedings_reference.reference_attributes.push(attribute)
-    expect(inproceedings_reference.reference_attributes.where(name: "pages").nil?).to eq(false)
+    expect(inproceedings_reference.reference_attributes.where(name: "pages").nil?).to be(false)
   end
 end

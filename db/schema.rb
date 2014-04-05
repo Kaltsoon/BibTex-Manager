@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20140328165348) do
 
+  create_table "attributes", force: true do |t|
+    t.text     "name"
+    t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "referende_id"
+  end
+
   create_table "reference_attributes", force: true do |t|
     t.integer  "reference_id"
     t.text     "name"
