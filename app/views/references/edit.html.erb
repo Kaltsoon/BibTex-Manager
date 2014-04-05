@@ -1,6 +1,6 @@
 <%= javascript_include_tag "references/edit_reference" %>
 <div class="page-header button-header">
-  <h1>Edit <%= @reference.name %> <small><%= @reference.ref_type %></small></h1>
+  <h1>Editing reference</h1>
   <div class="pull-right">
   	<%= link_to raw("<i class='fa fa-eye'></i> Show reference"), reference_path(@reference), class: "btn btn-default" %>
   </div>
@@ -30,7 +30,7 @@
 <div class="tab-content">
   	<div class="tab-pane active" id="basic-information">
   		<h2>Basic information</h2>
-  		<%= render "edit_reference_form", reference: @reference %>
+  		<%= render "edit_reference_form", ref: @reference %>
   	</div>
   	<div class="tab-pane" id="attributes">
   		<h2>Attributes</h2>
@@ -39,7 +39,7 @@
 				No attributes yet. Add some below!
 			</span>
 		<% end %>
-		<%= render "edit_attributes_form", reference: @reference %>
+		<%= render "edit_attributes_form", ref: @reference %>
   	</div>
 </div>
 

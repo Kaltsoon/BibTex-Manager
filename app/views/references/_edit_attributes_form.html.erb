@@ -6,7 +6,7 @@
 		<th></th>
 	</thead>
 	<tbody>
-		<% reference.reference_attributes.each do |attribute| %>
+		<% ref.reference_attributes.each do |attribute| %>
 			<tr>
 				<td><%= attribute.name %></td>
 				<%= form_tag reference_attribute_path(attribute), method: :put do %>
@@ -15,12 +15,12 @@
 					</td>
 					<td>
 						<%= hidden_field_tag "id", attribute.id %>
-						<%= hidden_field_tag "reference_attribute[reference_id]", reference.id %>
+						<%= hidden_field_tag "reference_attribute[reference_id]", ref.id %>
 						<%= submit_tag "Save", class: "btn btn-primary btn-xs" %>
 					</td>
 				<% end %>
 				<td>
-					<%= link_to raw("<i class='fa fa-times'></i> Remove"), attribute, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" unless reference.has_required_attribute?(attribute) %>
+					<%= link_to raw("<i class='fa fa-times'></i> Remove"), attribute, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" unless ref.has_required_attribute?(attribute) %>
 				</td>
 			</tr>
 		<% end %>
@@ -43,10 +43,10 @@
 		      			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 		      			Add a new attribute by selecting the attribute name and filling in its value
 		      		</div>
-		      		<% if reference.get_attributes_not_set.empty? %>
+		      		<% if ref.get_attributes_not_set.empty? %>
 		      			<span class="text-muted">All attributes have been set!</span>
 		      		<% end %>
-			       	<%= render "add_attributes_form", { reference: reference, attributes: reference.get_attributes_not_set } if !reference.get_attributes_not_set.empty? %>
+			       	<%= render "add_attributes_form", { ref: ref, attributes: ref.get_attributes_not_set } if !ref.get_attributes_not_set.empty? %>
 		      	</div>
 		    </div>
 	  	</div>

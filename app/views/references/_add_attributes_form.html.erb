@@ -1,5 +1,5 @@
 <%= form_tag reference_attributes_path, method: :post do %>
-	<%=  hidden_field_tag "reference_attribute[reference_id]", reference.id %>
+	<%=  hidden_field_tag "reference_attribute[reference_id]", ref.id %>
 	<div class="row">
 		<div class="col-md-4">
 			<%= select_tag "reference_attribute[name]", options_for_select(attributes, attributes.first), class: "form-control" %>

@@ -44,7 +44,7 @@ class ReferencesController < ApplicationController
   def update
     respond_to do |format|
       if @reference.update(params.require(:reference).permit(:name))
-        format.html { redirect_to edit_reference_path(@reference), notice: "Reference name has been set to '#{@reference.name}'" }
+        format.html { redirect_to edit_reference_path(@reference), notice: "Reference id has been set to '#{@reference.name}'" }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
