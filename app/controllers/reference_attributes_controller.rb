@@ -10,7 +10,7 @@ class ReferenceAttributesController < ApplicationController
         format.html { redirect_to edit_reference_path(@reference_attribute.reference_id), notice: "Attribute '#{@reference_attribute.name}' has been set to '#{@reference_attribute.value}'" }
         format.json { render action: 'show', status: :created, location: @reference_attribute }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to edit_reference_path(@reference_attribute.reference), alert: "Attribute '#{@reference_attribute.name}' was in valid!" }
         format.json { render json: @reference_attribute.errors, status: :unprocessable_entity }
       end
     end
@@ -24,7 +24,7 @@ class ReferenceAttributesController < ApplicationController
         format.html { redirect_to edit_reference_path(@reference_attribute.reference), notice: "Attribute '#{@reference_attribute.name}' has been set to '#{@reference_attribute.value}'" }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { redirect_to edit_reference_path(@reference_attribute.reference), alert: "Attribute '#{@reference_attribute.name}' was in valid!" }
         format.json { render json: @reference_attribute.errors, status: :unprocessable_entity }
       end
     end

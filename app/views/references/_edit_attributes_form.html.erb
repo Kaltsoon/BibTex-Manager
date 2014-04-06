@@ -11,7 +11,7 @@
 				<td><%= attribute.name %></td>
 				<%= form_tag reference_attribute_path(attribute), method: :put do %>
 					<td>
-						<%= text_field_tag "reference_attribute[value]", attribute.value, class: "form-control" %>
+						<%= text_field_tag "reference_attribute[value]", attribute.value, class: "form-control", required: true %>
 					</td>
 					<td>
 						<%= hidden_field_tag "id", attribute.id %>
