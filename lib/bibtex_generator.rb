@@ -2,10 +2,9 @@
 
 module BibtexGenerator
 	extend ActiveSupport::Concern
-	
-	special_symbols = {'ä' => '\\"{a}', 'ö' => '\\"{o}'}
-	
+
 	def generate_bibtex_string(references)
+    references = handle_special_symbols(references)
 		bibtex_file = ""
 		i = 0
 		references.each do |reference|
@@ -16,7 +15,7 @@ module BibtexGenerator
 	end
 	
 	private
-	
+
 	def generate_bibtex_for_reference(reference)
 		bibtex = "@" + reference.ref_type + "{" + reference.name + ",\n"
 		i = 0
@@ -32,20 +31,22 @@ module BibtexGenerator
 	
 	def handle_special_symbols(references)
 		references.each do |reference|
-			handle_skands_for_reference_attribute_values(reference)
+			handle_special_symbols_for_reference_attribute_values(reference)
 		end
 	end
 	
 	def handle_special_symbols_for_reference_attribute_values(reference)
 		reference.reference_attributes.each do |ref_att|
-			special_symbols_for_string(ref_att.value)
+			ref_att.value = special_symbols_for_string(ref_att.value)
 		end
 	end
 	
 	def special_symbols_for_string(s)
-		special_chars.each do |key, value|
-			s.tr(key, value)
-		end
+    special_symbols = {'ä' => '\\"{a}', 'Ä' => '\\"{A}', 'ö'=> '\\"{o}', 'Ö' => '\\"{O}'}
+    special_symbols.each do |key, value|
+			s = s.gsub(key, value)
+    end
+    s
 	end
 	
 end
