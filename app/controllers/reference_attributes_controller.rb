@@ -10,7 +10,7 @@ class ReferenceAttributesController < ApplicationController
         format.html { redirect_to edit_reference_path(@reference_attribute.reference_id), notice: "Attribute '#{@reference_attribute.name}' has been set to '#{@reference_attribute.value}'" }
         format.json { render action: 'show', status: :created, location: @reference_attribute }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to edit_reference_path(@reference_attribute.reference), alert: "Attribute '#{@reference_attribute.name}' was invalid!" }
         format.json { render json: @reference_attribute.errors, status: :unprocessable_entity }
       end
     end
@@ -21,10 +21,10 @@ class ReferenceAttributesController < ApplicationController
   def update
     respond_to do |format|
       if @reference_attribute.update(reference_attribute_params)
-        format.html { redirect_to @reference_attribute, notice: 'Reference attribute was successfully updated.' }
+        format.html { redirect_to edit_reference_path(@reference_attribute.reference), notice: "Attribute '#{@reference_attribute.name}' has been set to '#{@reference_attribute.value}'" }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { redirect_to edit_reference_path(@reference_attribute.reference), alert: "Attribute '#{@reference_attribute.name}' was invalid!" }
         format.json { render json: @reference_attribute.errors, status: :unprocessable_entity }
       end
     end
@@ -33,10 +33,15 @@ class ReferenceAttributesController < ApplicationController
   # DELETE /reference_attributes/1
   # DELETE /reference_attributes/1.json
   def destroy
-    @reference_attribute.destroy
-    respond_to do |format|
-      format.html { redirect_to reference_attributes_url }
-      format.json { head :no_content }
+    attribute = @reference_attribute
+    if(not @reference_attribute.reference.has_required_attribute?(@reference_attribute))
+      @reference_attribute.destroy
+      respond_to do |format|
+        format.html { redirect_to edit_reference_path(attribute.reference), notice: "Attribute '#{attribute.name}' has been removed" }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to references_path
     end
   end
 

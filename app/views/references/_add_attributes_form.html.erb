@@ -1,11 +1,11 @@
 <%= form_tag reference_attributes_path, method: :post do %>
-	<%=  hidden_field_tag "reference_attribute[reference_id]", reference.id %>
+	<%=  hidden_field_tag "reference_attribute[reference_id]", ref.id %>
 	<div class="row">
 		<div class="col-md-4">
 			<%= select_tag "reference_attribute[name]", options_for_select(attributes, attributes.first), class: "form-control" %>
 		</div>
 		<div class="col-md-4">
-			<%= text_field_tag "reference_attribute[value]", "", placeholder: "Attribute value", class: "form-control", required: true %> 
+			<%= text_field_tag "reference_attribute[value]", "", placeholder: "Attribute value", class: "form-control" %> 
 		</div>
 		<div class="col-md-4">
 			<%= submit_tag raw("Add"), class: "btn btn-success" %>

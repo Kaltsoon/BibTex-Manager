@@ -3,6 +3,7 @@
   <div class="pull-right">
     <div class="btn-group">
   		<%= link_to raw("<i class='fa fa-pencil'></i> Edit"), edit_reference_path(@reference), class: "btn btn-default" %>
+      <%= link_to raw("<i class='fa fa-download'></i> Download"), "/download_reference/#{@reference.id}", class: "btn btn-primary" %>
   		<%= link_to raw("<i class='fa fa-times'></i> Remove"), @reference, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
 	</div>
   </div>
@@ -13,11 +14,21 @@
 		<%= notice %>
 	</div>
 <% end %>
-<h2>Attributes</h2>
-<dl class="dl-horizontal">
-	<% @reference.reference_attributes.each do |attribute| %>
-  		<dt><%= attribute.name %></dt>
-  		<dd><%= attribute.value %></dd>
-  	<% end %>
-</dl>
+<div class="row">
+  <div class="col-md-6">
+    <h2>Attributes</h2>
+    <dl class="dl-horizontal">
+    	<% @reference.reference_attributes.each do |attribute| %>
+      		<dt><%= attribute.name %></dt>
+      		<dd><%= attribute.value %></dd>
+      	<% end %>
+    </dl>
+  </div>
+  <div class="col-md-6">
+    <h2>BibTex</h2>
+    <div class="well well-sm">
+      <%= raw(@bibtex) %>
+    </div>
+  </div>
+</div>
 
