@@ -1,7 +1,7 @@
 <%= form_tag reference_path(ref), method: :put do %>
   <div class="form-group">
     <%= label_tag "Id" %>
-    <%= text_field_tag "reference[name]", ref.name, class: "form-control", required: true %>
+    <%= text_field_tag "reference[name]", ref.name, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= submit_tag "Save", class: "btn btn-primary" %>
