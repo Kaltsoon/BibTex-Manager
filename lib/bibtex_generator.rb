@@ -10,6 +10,7 @@ module BibtexGenerator
 		references.each do |reference|
 			bibtex_file += generate_bibtex_for_reference(reference) + (i<(references.count-1) ? "\n\n" : "")
 			i += 1
+
 		end
 		return bibtex_file
 	end
@@ -42,11 +43,11 @@ module BibtexGenerator
 	end
 	
 	def special_symbols_for_string(s)
-    special_symbols = {'ä' => '\\"{a}', 'Ä' => '\\"{A}', 'ö'=> '\\"{o}', 'Ö' => '\\"{O}'}
-    special_symbols.each do |key, value|
-			s = s.gsub(key, value)
-    end
-    s
+	    special_symbols = {'ä' => '\\"{a}', 'Ä' => '\\"{A}', 'ö'=> '\\"{o}', 'Ö' => '\\"{O}'}
+	    special_symbols.each do |key, value|
+				s = s.gsub(key, value)
+	    end
+    	return s
 	end
 	
 end
