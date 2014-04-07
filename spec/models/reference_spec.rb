@@ -6,12 +6,6 @@ describe Reference do
   	expect(reference).to be_invalid
   end
 
-  it "required attribute check works" do
-    reference = Reference.new(name: "Aapinen", ref_type: "book")
-    attribute = FactoryGirl.create(:reference_attribute, name: "title")
-    expect(reference.has_required_attribute?(attribute)).to be true
-  end
-
   it "is saved if name set" do
   	reference = Reference.new(name: "Kirja", ref_type: "book")
     reference.reference_attributes = [FactoryGirl.create(:reference_attribute, name:"author"), 
