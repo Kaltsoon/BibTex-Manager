@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140328165348) do
-
-  create_table "attributes", force: true do |t|
-    t.text     "name"
-    t.text     "value"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "referende_id"
-  end
+ActiveRecord::Schema.define(version: 20140406081002) do
 
   create_table "reference_attributes", force: true do |t|
     t.integer  "reference_id"
