@@ -5,6 +5,10 @@ class ArticleReference
 		return ["author", "title", "journal", "year", "volume", "number", "pages", "month", "note", "key"]
 	end
 
+	def self.at_least_one
+		return []
+	end
+
 	def self.get_required_attributes
 		return ["author", "title", "journal", "year"]
 	end
