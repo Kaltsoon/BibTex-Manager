@@ -22,10 +22,8 @@ config/secrets.yml
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
-<<<<<<< HEAD
-*.DS_Store
-=======
 
+*.DS_Store
 #rubymine project thing
 .idea/
->>>>>>> 29db35a805f557bb9a365e84fb923ed47cad5a2f
+
