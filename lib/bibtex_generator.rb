@@ -4,13 +4,13 @@ module BibtexGenerator
 	extend ActiveSupport::Concern
 
 	def generate_bibtex_string(references)
-    references = handle_special_symbols(references)
 		bibtex_file = ""
 		i = 0
 		references.each do |reference|
 			bibtex_file += generate_bibtex_for_reference(reference) + (i<(references.count-1) ? "\n\n" : "")
 			i += 1
-		end
+    end
+    bibtex_file = replace_special_symbols_for_string(bibtex_file)
 		return bibtex_file
 	end
 	
@@ -29,24 +29,12 @@ module BibtexGenerator
 	
 	# Handle special symbols
 	
-	def handle_special_symbols(references)
-		references.each do |reference|
-			handle_special_symbols_for_reference_attribute_values(reference)
-		end
-	end
-	
-	def handle_special_symbols_for_reference_attribute_values(reference)
-		reference.reference_attributes.each do |ref_att|
-			ref_att.value = special_symbols_for_string(ref_att.value)
-		end
-	end
-	
-	def special_symbols_for_string(s)
+	def replace_special_symbols_for_string(s)
     special_symbols = {'ä' => '\\"{a}', 'Ä' => '\\"{A}', 'ö'=> '\\"{o}', 'Ö' => '\\"{O}'}
     special_symbols.each do |key, value|
 			s = s.gsub(key, value)
     end
-    s
+    return s
 	end
 	
 end
