@@ -56,9 +56,10 @@ class ReferencesController < ApplicationController
   # DELETE /references/1
   # DELETE /references/1.json
   def destroy
+    ref_name = @reference.name
     @reference.destroy
     respond_to do |format|
-      format.html { redirect_to references_url }
+      format.html { redirect_to references_url, notice: "Reference '#{ref_name}' has been removed" }
       format.json { head :no_content }
     end
   end

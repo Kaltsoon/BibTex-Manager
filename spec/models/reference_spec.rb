@@ -74,5 +74,10 @@ describe Reference do
     expect(atributes).to be == bookAtributes
   end
 
+  it "is not saved if reference type not valid" do
+      reference = Reference.new(name: "xxx", ref_type: "xxx")
+      expect(reference).to be_invalid
+  end
+
 
 end

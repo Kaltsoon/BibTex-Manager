@@ -47,10 +47,15 @@ describe ReferenceAttribute do
       FactoryGirl.create(:reference_attribute, name:"title"),
       FactoryGirl.create(:reference_attribute, name:"booktitle"),
       FactoryGirl.create(:reference_attribute, name:"year")]
+    inproceedings_reference.save
     
     attribute = ReferenceAttribute.new(name: "paa", value: "test_value")
-    inproceedings_reference.reference_attributes.push(attribute)
-    expect(inproceedings_reference.reference_attributes.map{|a| a.name}.include?("paa")).to be(true) ## <-pitäisi olla false
+    
+    expect(inproceedings_reference.reference_attributes.count).to be(4)
+
+    attribute.update_attributes(reference_id: inproceedings_reference.id)
+
+    expect(inproceedings_reference.reference_attributes.count).to be(4)
   end
 
 end

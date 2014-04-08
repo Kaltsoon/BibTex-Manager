@@ -6,6 +6,12 @@
     <%= link_to raw("<i class='fa fa-plus'></i> New reference"), new_reference_path, class: "btn btn-success" %>
   </div>
 </div>
+<% if notice %>
+  <div class="alert alert-info alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <%= notice %>
+  </div>
+<% end %>
 <h2>Filter</h2>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">

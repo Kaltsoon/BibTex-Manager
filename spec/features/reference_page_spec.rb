@@ -23,12 +23,7 @@ describe "Reference page" do
   it "doesn't save reference if name not valid", js:true do
     visit new_reference_path
 
-    within("#attributes_form"){
-      fill_in('attribute_author', with:'au')
-      fill_in('attribute_title', with:'ti')
-      fill_in('attribute_publisher', with:'pu')
-      fill_in('attribute_year', with:'1234')
-    }
+    fill_in_attributes()
 
     click_button("submit_reference")
 
@@ -40,12 +35,8 @@ describe "Reference page" do
 
     fill_in('reference_name', with:'title1')
 
-    within("#attributes_form"){
-      fill_in('attribute_author', with:'au')
-      fill_in('attribute_title', with:'ti')
-      fill_in('attribute_publisher', with:'pu')
-      fill_in('attribute_year', with:'1234')
-    }
+    fill_in_attributes()
+    
     click_button("submit_reference") 
 
     expect(page).to have_content 'Reference was successfully created'
@@ -56,12 +47,7 @@ describe "Reference page" do
 
       fill_in('reference_name', with: "aapinen66")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference") 
       click_link("Edit")
@@ -81,12 +67,7 @@ describe "Reference page" do
 
       fill_in('reference_name', with: "aapinen_tooltip")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference") 
       click_link("BibText manager")
@@ -109,12 +90,7 @@ describe "Reference page" do
 
       fill_in('reference_name', with: "aapinen_tooltip")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference") 
       click_link("BibText manager")
@@ -129,12 +105,7 @@ describe "Reference page" do
 
       fill_in('reference_name', with: "aapinen_tooltip")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference") 
       click_link("BibText manager")
@@ -148,12 +119,7 @@ describe "Reference page" do
 
       fill_in('reference_name', with: "edit_aapinen_tooltip")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference") 
       click_link("BibText manager")
@@ -170,17 +136,32 @@ describe "Reference page" do
 
   end
 
+    it "edit reference name using tooltip edit", js:true do
+      visit new_reference_path
+
+      fill_in('reference_name', with: "edit_aapinen_tooltip")
+
+      fill_in_attributes()
+
+      click_button("submit_reference") 
+      click_link("BibText manager")
+      page.find('.reference-attributes-popover').click
+      click_link("Edit")
+
+      fill_in('reference_name', with: "")
+      click_button("Save")
+
+      
+      expect(page).to have_content "Name can't be blank"
+
+
+  end
   it "add not valid attribute", js:true do
       visit new_reference_path
 
       fill_in('reference_name', with: "aapinen_attribute")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference") 
       click_link("BibText manager")
@@ -203,12 +184,7 @@ describe "Reference page" do
 
       fill_in('reference_name', with: "aapinen_attribute1")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference")
 
@@ -239,12 +215,7 @@ describe "Reference page" do
 
       fill_in('reference_name', with: "attribute_edit")
 
-      within("#attributes_form"){
-        fill_in('attribute_author', with:'au')
-        fill_in('attribute_title', with:'ti')
-        fill_in('attribute_publisher', with:'pu')
-        fill_in('attribute_year', with:'1234')
-      }
+      fill_in_attributes()
 
       click_button("submit_reference")
 
@@ -252,10 +223,95 @@ describe "Reference page" do
       page.find('.reference-attributes-popover').click
       click_link("Edit")
       click_link("Attributes")
-      select("title", from: "reference_attribute_value")
-      fill_in('reference_attribute_value', with: "11")
+      save_and_open_page
+      find(".reference_attribute_author td input#reference_attribute_value").set("11")
+      within(".reference_attribute_author"){
+        click_button("Save")
+      }
       
-      
-      expect(page).to have_content Attribute "'volume' has been set to '11'" 
+      expect(page).to have_content "Attribute 'author' has been set to '11'" 
   end
+
+  it "edit attribute set null", js:true do
+      visit new_reference_path
+
+      fill_in('reference_name', with: "attribute_edit")
+
+      fill_in_attributes()
+
+      click_button("submit_reference")
+
+      click_link("BibText manager")
+      page.find('.reference-attributes-popover').click
+      click_link("Edit")
+      click_link("Attributes")
+      save_and_open_page
+      find(".reference_attribute_author td input#reference_attribute_value").set("")
+      within(".reference_attribute_author"){
+        click_button("Save")
+      }
+      
+      expect(page).to have_content "Attribute 'author' was invalid!" 
+  end
+
+    it "reference remove", js:true do
+      visit new_reference_path
+
+      fill_in('reference_name', with: "reference_remove")
+
+      fill_in_attributes()
+
+      click_button("submit_reference")
+
+      click_link("BibText manager")
+      page.find('.reference-attributes-popover').click
+      click_link("Show")
+
+      click_link("Remove")
+      page.driver.browser.switch_to.alert.accept
+
+      expect(page).to have_content "Reference 'reference_remove' has been removed" 
+  end
+
+
+
+  it "reference download", js:true do
+      visit new_reference_path
+
+      fill_in('reference_name', with: "reference_download")
+
+      fill_in_attributes()
+
+      click_button("submit_reference")
+      click_link("BibText manager")
+      expect(page).to have_content "Download reference"
+      click_link("Download reference")
+
+  end
+
+   it "View plain BibTex", js:true do
+      visit new_reference_path
+
+      fill_in('reference_name', with: "reference_view")
+
+      fill_in_attributes()
+
+      click_button("submit_reference")
+
+      click_link("BibText manager")
+      click_link("View plain BibTex")
+      expect(page).to have_content "@book{reference_view, author = {au}, title = {ti}, publisher = {pu}, year = {1234} }"
+      
+
+  end
+
+  def fill_in_attributes()
+     within("#attributes_form"){
+      fill_in('attribute_author', with:'au')
+      fill_in('attribute_title', with:'ti')
+      fill_in('attribute_publisher', with:'pu')
+      fill_in('attribute_year', with:'1234')
+    }
+  end
+
 end

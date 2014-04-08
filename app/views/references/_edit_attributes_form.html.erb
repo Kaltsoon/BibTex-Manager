@@ -7,7 +7,7 @@
 	</thead>
 	<tbody>
 		<% ref.reference_attributes.each do |attribute| %>
-			<tr>
+			<tr class="reference_attribute_<%= attribute.name %>">
 				<td><%= attribute.name %></td>
 				<%= form_tag reference_attribute_path(attribute), method: :put do %>
 					<td>
