@@ -7,7 +7,6 @@ describe "Reference page" do
   end
 
   before :each do
-
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.start
   end
@@ -223,7 +222,7 @@ describe "Reference page" do
       page.find('.reference-attributes-popover').click
       click_link("Edit")
       click_link("Attributes")
-      save_and_open_page
+      
       find(".reference_attribute_author td input#reference_attribute_value").set("11")
       within(".reference_attribute_author"){
         click_button("Save")
@@ -245,7 +244,6 @@ describe "Reference page" do
       page.find('.reference-attributes-popover').click
       click_link("Edit")
       click_link("Attributes")
-      save_and_open_page
       find(".reference_attribute_author td input#reference_attribute_value").set("")
       within(".reference_attribute_author"){
         click_button("Save")
