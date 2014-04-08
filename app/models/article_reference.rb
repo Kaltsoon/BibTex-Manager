@@ -2,7 +2,7 @@ class ArticleReference
 	include ActiveModel::Model
 
 	def self.get_available_attributes
-		return ["author", "title", "journal", "year", "volume", "number", "pages", "month", "note", "key"]
+		return ["author", "title", "journal", "year", "volume", "number", "pages", "month", "note", "key", "publisher", "address"]
 	end
 
 	def self.fields_to_render
