@@ -85,14 +85,14 @@ class ReferencesController < ApplicationController
     def add_attributes(reference, attributes)
       attributes.each do |key, value|
           attribute = ReferenceAttribute.new(name: key, value: value)
-          reference.reference_attributes.push(attribute)
+          reference.reference_attributes.push(attribute) unless attribute.value.empty?
       end
     end
 
     def set_types
-      @book_required_attributes = BookReference.get_required_attributes
-      @article_required_attributes = ArticleReference.get_required_attributes
-      @inproceedings_required_attributes = InproceedingsReference.get_required_attributes
+      @book_fields = BookReference.fields_to_render
+      @article_fields = ArticleReference.fields_to_render
+      @inproceedings_fields = InproceedingsReference.fields_to_render
       @ref_types = Reference.get_available_types
     end
     # Use callbacks to share common setup or constraints between actions.

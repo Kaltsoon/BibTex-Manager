@@ -20,7 +20,7 @@
 					</td>
 				<% end %>
 				<td>
-					<%= link_to raw("<i class='fa fa-times'></i> Remove"), attribute, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" unless ref.has_required_attribute?(attribute) %>
+					<%= link_to raw("<i class='fa fa-times'></i> Remove"), attribute, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" if ref.can_remove_attribute?(attribute) %>
 				</td>
 			</tr>
 		<% end %>

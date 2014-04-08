@@ -34,7 +34,7 @@ class ReferenceAttributesController < ApplicationController
   # DELETE /reference_attributes/1.json
   def destroy
     attribute = @reference_attribute
-    if(not @reference_attribute.reference.has_required_attribute?(@reference_attribute))
+    if(@reference_attribute.reference.can_remove_attribute?(@reference_attribute))
       @reference_attribute.destroy
       respond_to do |format|
         format.html { redirect_to edit_reference_path(attribute.reference), notice: "Attribute '#{attribute.name}' has been removed" }

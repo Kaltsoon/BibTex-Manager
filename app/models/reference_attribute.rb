@@ -7,7 +7,7 @@ class ReferenceAttribute < ActiveRecord::Base
 	private
 
 	def validate_attribute
-		if(not reference.nil? and not (reference.get_available_attributes).include?(name))
+		if(not reference.nil? and not reference.get_available_attributes.include?(name))
 			errors.add(:name, "is not valid!")
 		end
 	end

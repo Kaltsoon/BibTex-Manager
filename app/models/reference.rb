@@ -11,8 +11,8 @@ class Reference < ActiveRecord::Base
 		return generate_bibtex_string([self]).gsub(/(?:\n\r?|\r\n?)/, '<br>')
 	end
 
-	def has_required_attribute?(attribute)
-		return "#{ref_type.downcase.capitalize}Reference".constantize.get_required_attributes.include?(attribute.name)
+	def can_remove_attribute?(attribute)
+		return "#{ref_type.downcase.capitalize}Reference".constantize.fills_required_attributes?(reference_attributes.map{|a| a.name}-[attribute.name])
 	end
 
 	def get_available_attributes()
@@ -31,6 +31,10 @@ class Reference < ActiveRecord::Base
 		return ["book", "article", "inproceedings"]
 	end
 
+	def fills_required_attributes?
+		return "#{ref_type.downcase.capitalize}Reference".constantize.fills_required_attributes?(reference_attributes.map{|a| a.name})
+	end
+
 	private
 
 	def validate_type
@@ -39,9 +43,10 @@ class Reference < ActiveRecord::Base
 		end
 	end
 
+
 	def validate_required_attributes
-		if(not (get_required_attributes-reference_attributes.map{|a| a.name}).empty?)
-			errors.add(:reference_attributes, "reference needs to have all required attributes!")
+		if(not fills_required_attributes?)
+			errors.add(:reference_attributes, "needs to have all the required attributes!")
 		end
 	end
 

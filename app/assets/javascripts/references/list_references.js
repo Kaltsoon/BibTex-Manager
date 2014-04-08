@@ -33,6 +33,9 @@ var REFERENCE_LIST_MODULE =
 		$("#reference-list").html(Mustache.to_html($("#reference-row-template").html(), { references: references }));
 		$(".reference-attributes-popover").popover();
 		$(".reference-bibtex-popover").popover();
+		$("a[rel=popover]").on("click",function(){
+			$("a[rel=popover]").not(this).popover("hide");
+		});
 	}
 	var list = function(){
 		fetch(render);
