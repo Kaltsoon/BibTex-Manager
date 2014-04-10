@@ -51,7 +51,6 @@ describe "List references page" do
       click_button("Save")
   
       expect(page).to have_content "Reference id has been set to 'aapinen_tooltip_edit'"
-      click_link("BibText manager")
       expect(page).to have_content "aapinen_tooltip_edit"
 
   end

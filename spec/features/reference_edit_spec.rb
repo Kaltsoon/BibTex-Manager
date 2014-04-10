@@ -27,7 +27,6 @@ describe "Edit reference page" do
   it "edit reference using tooltip ", js:true do
       create_custom_test_reference("aapinen_tooltip")
 
-      click_link("BibText manager")
       page.find('.reference-attributes-popover').click
       new_attribute_page
 
@@ -57,7 +56,6 @@ describe "Edit reference page" do
   it "add not valid attribute", js:true do
       create_custom_test_reference("aapinen_attribute")
 
-      click_link("BibText manager")
       page.find('.reference-attributes-popover').click
       new_attribute_page
 
@@ -73,8 +71,8 @@ describe "Edit reference page" do
   it "destroy attribute", js:true do
       create_custom_test_reference("aapinen_attribute1")
 
-      click_link("BibText manager")
-      page.find('.reference-attributes-popover').click
+
+      find('.reference-attributes-popover').click
       new_attribute_page
 
       within(".panel-body"){
@@ -83,8 +81,8 @@ describe "Edit reference page" do
         click_button("Add") 
       }
 
-      click_link("BibText manager")
-      page.find('.reference-attributes-popover').click
+      visit references_path
+      find('.reference-attributes-popover').click
       remove_attribute
       page.driver.browser.switch_to.alert.accept
 
@@ -94,7 +92,6 @@ describe "Edit reference page" do
   it "edit attribute", js:true do
       create_custom_test_reference("attribute_edit")
 
-      click_link("BibText manager")
       page.find('.reference-attributes-popover').click
       edit_attribute
       

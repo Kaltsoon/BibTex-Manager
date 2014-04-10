@@ -27,7 +27,6 @@ describe "Edit reference page" do
   it "reference remove", js:true do
       create_custom_test_reference("reference_remove")
 
-      click_link("BibText manager")
       page.find('.reference-attributes-popover').click
       click_link("Show")
 
