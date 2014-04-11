@@ -98,7 +98,11 @@ class ReferencesController < ApplicationController
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_reference
-      @reference = Reference.find(params[:id])
+      if !Reference.where(:id => params[:id]).first.nil?
+        @reference = Reference.find(params[:id])
+      else
+        redirect_to references_path, notice: "Reference not found or removed!"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -48,7 +48,11 @@ class ReferenceAttributesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reference_attribute
-      @reference_attribute = ReferenceAttribute.find(params[:id])
+      if !ReferenceAttribute.where(:id => params[:id]).first.nil?
+        @reference_attribute = ReferenceAttribute.find(params[:id])
+      else
+        redirect_to references_path, notice: "Reference attribute not found or reference attribute has been removed"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
