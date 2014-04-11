@@ -32,7 +32,11 @@ class Reference < ActiveRecord::Base
 	end
 
 	def fills_required_attributes?
-		return "#{ref_type.downcase.capitalize}Reference".constantize.fills_required_attributes?(reference_attributes.map{|a| a.name})
+		if(Reference.get_available_types.include?(ref_type))
+			return "#{ref_type.downcase.capitalize}Reference".constantize.fills_required_attributes?(reference_attributes.map{|a| a.name})
+		else
+			return false
+		end
 	end
 
 	private

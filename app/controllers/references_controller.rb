@@ -72,13 +72,13 @@ class ReferencesController < ApplicationController
   def download_bibtex
     references = Reference.includes(:reference_attributes).all
     bib = generate_bibtex_string(references)
-    send_data(bib.to_s, filename: "bitext.bib")
+    send_data(bib.to_s, filename: "bibtex.bib")
   end
 
   def download_bibtex_single_reference
     reference = Reference.find(params[:id])
     bib = generate_bibtex_string([reference])
-    send_data(bib.to_s, filename: "bitext.bib")
+    send_data(bib.to_s, filename: "bibtex.bib")
   end
 
   private

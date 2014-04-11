@@ -10,20 +10,21 @@ module BibtexGenerator
 			bibtex_file += generate_bibtex_for_reference(reference) + (i<(references.count-1) ? "\n\n" : "")
 			i += 1
     	end
-    	bibtex_file = replace_special_symbols_for_string(bibtex_file)
-		return bibtex_file
+	return bibtex_file
 	end
 	
 	private
 
 	def generate_bibtex_for_reference(reference)
-		bibtex = "@" + reference.ref_type + "{" + reference.name + ",\n"
+		bibtex_id = "@" + reference.ref_type + "{" + reference.name + ",\n"
+		bibtex = ""
 		i = 0
 		reference.reference_attributes.each do |ref_att|
 			bibtex += "\t" + ref_att.name + " = " + "{" + ref_att.value + "}"+ (i<(reference.reference_attributes.count-1) ? "," : "") + "\n"
 			i += 1
 		end
 		bibtex += "}"
+		bibtex = bibtex_id + replace_special_symbols_for_string(bibtex)
 		return bibtex
 	end
 	
