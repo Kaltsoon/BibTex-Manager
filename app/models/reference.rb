@@ -8,7 +8,7 @@ class Reference < ActiveRecord::Base
 	validate :ref_type, :validate_type
 
 	def get_bibtex
-		return generate_bibtex_string([self]).gsub(/(?:\n\r?|\r\n?)/, '<br>')
+		return generate_bibtex_string([self]).gsub(/(?:\n\r?|\r\n?)/, "<br>").gsub(/(?:\t\r?|\r\t?)/, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
 	end
 
 	def can_remove_attribute?(attribute)

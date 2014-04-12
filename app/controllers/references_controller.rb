@@ -13,7 +13,6 @@ class ReferencesController < ApplicationController
   # GET /references/1
   # GET /references/1.json
   def show
-    @bibtex = generate_bibtex_string([@reference]).gsub(/(?:\n\r?|\r\n?)/, '<br>')
   end
 
   # GET /references/new
@@ -65,8 +64,8 @@ class ReferencesController < ApplicationController
   end
 
   def plain_bibtex
-    references = Reference.includes(:reference_attributes).all
-    @plain_bibtex = generate_bibtex_string(references).gsub(/(?:\n\r?|\r\n?)/, '<br>')
+    @references = Reference.includes(:reference_attributes).all
+    @file_formated_bibtex = generate_bibtex_string(@references)
   end
 
   def download_bibtex
@@ -79,6 +78,20 @@ class ReferencesController < ApplicationController
     reference = Reference.find(params[:id])
     bib = generate_bibtex_string([reference])
     send_data(bib.to_s, filename: "bibtex.bib")
+  end
+
+  def download_filtered_references
+    id_hash = params[:references]
+    references = []
+    id_hash.each do |key,val|
+      references.push(Reference.find(key))
+    end
+    if(not references.empty?)
+      bib = generate_bibtex_string(references)
+      send_data(bib.to_s, filename: "bibtex.bib")
+    else
+      send_data(" ", filename: "bibtex.bib")
+    end
   end
 
   private

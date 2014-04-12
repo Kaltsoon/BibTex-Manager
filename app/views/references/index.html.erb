@@ -27,7 +27,10 @@
       <div class="panel-body">
          <div class="alert alert-info alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            Type in a keyword for filtering the list below
+            <strong>Type in a keyword for filtering the list below</strong>
+            <ul>
+              <li>To filter by a single keyword just type in the keyword. F.e <i>book</i> or <i>'book'</i></li>
+              <li>To filter by multiple keywords type in f.e. <i>'book' and '2007' and 'Royce'</i>
          </div>
         <div class="form-group">
           <input type="text" placeholder="Keyword" class="form-control" id="filter-keyword">
@@ -36,22 +39,32 @@
     </div>
   </div>
 </div>
-<h2>List</h2>
-<div id="reference-list">
-</div>
+<%= form_tag "download_filtered_references", method: :post do %>
+  <h2>
+    List
+    <%= button_tag(type: "submit", class: "btn btn-primary btn-sm pull-right", id: "download-filtered-references") do %>
+      <i class="fa fa-download"></i> Download these references
+    <% end %>
+  </h2>
+  <div id="reference-list">
+  </div>
+<% end %>
 <script id="reference-row-template" type="text/html">
   <table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Type</th>
       <th>Id</th>
-      <th></th>
-      <th></th>
+      <th>Plain BibTex</th>
+      <th>Author<span class="text-muted">/</span>Editor</th>
+      <th>Title</th>
+      <th>Year</th>
     </tr>
   </thead>
 
   <tbody>
     {{#references}}
+    <input type="hidden" name="references[{{id}}]">
     <tr>
         <td><span class="label label-primary">{{ref_type}}</span></td>
         <td>
@@ -78,10 +91,12 @@
                   </div>" 
                 data-placement="right"
                 data-html="true" data-original-title="Plain BibTex">
-                <i class='fa fa-eye'></i> Show BibTex
+                <i class='fa fa-eye'></i> BibTex
               </a>
-              </td>
-        <td><a href="download_reference/{{id}}" class="btn btn-primary btn-xs"><i class='fa fa-download'></i> Download reference</a></td>
+        </td>
+        {{#displayed_attributes}}
+          <td>{{value}}</td>
+        {{/displayed_attributes}}
       </tr>
     {{/references}}
   </tbody>

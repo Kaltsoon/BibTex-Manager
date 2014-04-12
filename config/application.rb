@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module Bibtex
   class Application < Rails::Application
-    config.assets.precompile += ["references/list_references.js", "references/create_reference.js", "references/edit_reference.js", "references/mustache.js"]
+    config.assets.precompile += ["references/list_references.js", "references/create_reference.js", "references/edit_reference.js", "references/mustache.js", "references/plain_bibtex.js"]
     config.autoload_paths += Dir["#{Rails.root}/lib"]
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
