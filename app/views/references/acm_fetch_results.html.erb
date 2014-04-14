@@ -1,0 +1,55 @@
+<div class="page-header">
+	<h1>Fetch results</h1>
+</div>
+<% unless @bibtex.empty? %>
+	<div class="alert alert-info alert-dismissable">
+	    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	    Select the references you want to save
+	 </div>
+	<p>
+	<%= @bibtex %>
+	</p>
+	<table class="table table-bordered table-hover">
+	    <thead>
+	      <tr>
+	      	<th>Select</th>
+	        <th>Type</th>
+	        <th>Id</th>
+	        <th>BibTex</th>
+	        <th>Author<span class="text-muted">/</span>Editor</th>
+	        <th>Title</th>
+	        <th>Year</th>
+	      </tr>
+	    </thead>
+	    	<tr>
+	    		<td>
+	    			<input type="checkbox">
+	    		</td>
+	    		<td>
+	    			<span class="label label-primary">book</span>
+	    		</td>
+	    		<td>
+	    			<a>kirja6</a>
+	    		</td>
+	    		<td>
+	    			<a class="btn btn-default btn-xs"><i class="fa fa-eye"></i> BibTex</a>
+	    		</td>
+	    		<td>
+	    			Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas
+	    		</td>
+	    		<td>
+	    			Three Years of Design-based Research to Reform a Software Engineering Curriculum
+	    		</td>
+	    		<td>
+	    			2012
+	    		</td>
+	    	</tr>
+	    <tbody>
+	    </tbody>
+    </table>
+	<button class="btn btn-primary">Save selected references</button>
+<% else %>
+	<span class="text-muted">
+		No references found from the given url
+	</span>
+<% end %>

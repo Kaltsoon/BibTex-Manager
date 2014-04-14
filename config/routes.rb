@@ -29,6 +29,7 @@ Bibtex::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  post "/acm_fetch_results", to: "references#fetch_references_from_acm"
   get "/plain_bibtex", to: "references#plain_bibtex"
   get "/download_all_references", to: "references#download_bibtex"
   get "/download_reference/:id", to: "references#download_bibtex_single_reference"
