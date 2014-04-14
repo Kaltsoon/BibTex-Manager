@@ -15,3 +15,4 @@
 //= require twitter/bootstrap
 //= require_self
 //= require bootstrap.min
+//= require zeroclipboard

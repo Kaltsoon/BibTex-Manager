@@ -33,6 +33,7 @@ Bibtex::Application.routes.draw do
   get "/download_all_references", to: "references#download_bibtex"
   get "/download_reference/:id", to: "references#download_bibtex_single_reference"
   get "/", to: "references#index"
+  post "download_filtered_references", to: "references#download_filtered_references"
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

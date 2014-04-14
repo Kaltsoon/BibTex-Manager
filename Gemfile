@@ -49,6 +49,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.14.1'
 end
 
+gem 'zeroclipboard-rails'
+
 group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
