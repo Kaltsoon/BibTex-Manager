@@ -141,6 +141,7 @@ describe "Edit reference page" do
     click_link("Attributes")
     ReferenceAttribute.last.destroy
     click_link("Remove")
+    page.driver.browser.switch_to.alert.accept
     expect(page).to have_content "Reference attribute not found or reference attribute has been removed"
   end
 

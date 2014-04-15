@@ -1,5 +1,6 @@
 class ReferencesController < ApplicationController
   include BibtexGenerator
+  include AcmFetcher
 
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
   before_action :set_types, only: [:new, :create]
@@ -81,17 +82,23 @@ class ReferencesController < ApplicationController
   end
 
   def download_filtered_references
-    id_hash = params[:references]
-    references = []
-    id_hash.each do |key,val|
-      references.push(Reference.find(key))
-    end
-    if(not references.empty?)
+    if(params.has_key?(:references))
+      id_hash = params[:references]
+      references = []
+      id_hash.each do |key,val|
+        references.push(Reference.find(key))
+      end
       bib = generate_bibtex_string(references)
       send_data(bib.to_s, filename: "bibtex.bib")
     else
       send_data(" ", filename: "bibtex.bib")
     end
+  end
+
+  def fetch_references_from_acm
+    url = params[:url]
+    @bibtex = fetch_bibtex_from_acm(url)
+    render :acm_fetch_results
   end
 
   private

@@ -51,54 +51,54 @@
 <% end %>
 <script id="reference-row-template" type="text/html">
   <table class="table table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Id</th>
-      <th>BibTex</th>
-      <th>Author<span class="text-muted">/</span>Editor</th>
-      <th>Title</th>
-      <th>Year</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {{#references}}
-    <input type="hidden" name="references[{{id}}]">
-    <tr>
-        <td><span class="label label-primary">{{ref_type}}</span></td>
-        <td>
-          <a class="reference-attributes-popover" rel="popover" 
-              data-content="
-                  {{#reference_attributes}}
-                    <p>
-                      <strong>{{name}}</strong> <span class='text-muted'>-</span> {{value}}
-                    </p>
-                  {{/reference_attributes}}
-                  <div class='btn-group'>
-                    <a href='references/{{id}}/edit' class='btn btn-default btn-sm'>Edit</a>
-                    <a href='references/{{id}}' class='btn btn-default btn-sm'>Show</a>
-                  </div>" 
-              data-placement="right"
-              data-html="true" data-original-title="{{name}}">
-              {{name}}
-          </a>
-        </td>
-        <td><a class="btn btn-default btn-xs reference-bibtex-popover" rel="popover"
-                data-content="
-                  <div class='well well-sm'>
-                    {{get_bibtex}}
-                  </div>" 
-                data-placement="right"
-                data-html="true" data-original-title="Plain BibTex">
-                <i class='fa fa-eye'></i> BibTex
-              </a>
-        </td>
-        {{#displayed_attributes}}
-          <td>{{value}}</td>
-        {{/displayed_attributes}}
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Id</th>
+        <th>BibTex</th>
+        <th>Author<span class="text-muted">/</span>Editor</th>
+        <th>Title</th>
+        <th>Year</th>
       </tr>
-    {{/references}}
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      {{#references}}
+      <input type="hidden" name="references[{{id}}]">
+      <tr>
+          <td><span class="label label-primary">{{ref_type}}</span></td>
+          <td>
+            <a class="reference-attributes-popover" rel="popover" 
+                data-content="
+                    {{#reference_attributes}}
+                      <p>
+                        <strong>{{name}}</strong> <span class='text-muted'>-</span> {{value}}
+                      </p>
+                    {{/reference_attributes}}
+                    <div class='btn-group'>
+                      <a href='references/{{id}}/edit' class='btn btn-default btn-sm'>Edit</a>
+                      <a href='references/{{id}}' class='btn btn-default btn-sm'>Show</a>
+                    </div>" 
+                data-placement="right"
+                data-html="true" data-original-title="{{name}}">
+                {{name}}
+            </a>
+          </td>
+          <td><a class="btn btn-default btn-xs reference-bibtex-popover" rel="popover"
+                  data-content="
+                    <div class='well well-sm'>
+                      {{get_bibtex}}
+                    </div>" 
+                  data-placement="right"
+                  data-html="true" data-original-title="Plain BibTex">
+                  <i class='fa fa-eye'></i> BibTex
+                </a>
+          </td>
+          {{#displayed_attributes}}
+            <td>{{value}}</td>
+          {{/displayed_attributes}}
+        </tr>
+      {{/references}}
+    </tbody>
+  </table>
 </script>
