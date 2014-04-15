@@ -70,8 +70,8 @@ describe "List references page" do
   it "reference download", js:true do
       create_custom_test_reference("reference_download")
 
-      expect(page).to have_content "Download reference"
-      click_link("Download reference")
+      expect(page).to have_content "Download all references"
+      click_link("Download all references")
   end
   
   it "View plain BibTex", js:true do
@@ -83,32 +83,59 @@ describe "List references page" do
   
   it "Filttering filters with name", js:true do
   	fill_test_data
-  	visit references_path
-	click_link("Options")
-	fill_in("filter-keyword", with: "Artikkeli")
-	expect(page).to have_no_content "Kirja"
-	expect(page).to have_no_content "Joku"
-	expect(page).to have_content "Artikkeli"
+  	
+  	click_link("Options")
+  	fill_in("filter-keyword", with: "Artikkeli")
+  	expect(page).to have_no_content "Kirja"
+  	expect(page).to have_no_content "Joku"
+  	expect(page).to have_content "Artikkeli"
   end
   
   it "Filttering filters with type", js:true do
-	fill_test_data
-	visit references_path
-	click_link("Options")
-	fill_in("filter-keyword", with: "article")
-	expect(page).to have_no_content "Kirja"
-	expect(page).to have_no_content "Joku"
-	expect(page).to have_content "Artikkeli"
+  	fill_test_data
+  	click_link("Options")
+  	fill_in("filter-keyword", with: "article")
+  	expect(page).to have_no_content "Kirja"
+  	expect(page).to have_no_content "Joku"
+  	expect(page).to have_content "Artikkeli"
   end
   
   it "Filttering filters with attribute value", js:true do
-	fill_test_data
-	visit references_path
-	click_link("Options")
-	fill_in("filter-keyword", with: "pullien paiston ABC")
-	expect(page).to have_no_content "Kirja"
-	expect(page).to have_no_content "Joku"
-	expect(page).to have_content "Artikkeli"
+  	fill_test_data
+  	click_link("Options")
+  	fill_in("filter-keyword", with: "pullien paiston ABC")
+  	expect(page).to have_no_content "Kirja"
+  	expect(page).to have_no_content "Joku"
+  	expect(page).to have_content "Artikkeli"
   end
   
+  it "Filttering filters with one char", js:true do
+    fill_test_data
+    click_link("Options")
+    fill_in("filter-keyword", with: "p")
+    page.all("#reference-list table tbody tr").count.should eql(2)
+  end
+
+  it "Filttering filters with and options", js:true do
+    fill_test_data
+    click_link("Options")
+    fill_in("filter-keyword", with: "'2013' and 'henri korpela'")
+    expect(page).to have_no_content "Kirja"
+    expect(page).to have_no_content "Joku"
+    expect(page).to have_content "Artikkeli"
+  end
+
+  it "download filtered references", js:true do
+    fill_test_data
+    click_link("Options")
+    fill_in("filter-keyword", with: "p")
+    expect(page).to have_content "Download these references"
+    click_button("Download these references")
+  end
+
+  it "download filtered references list is null", js:false do
+    visit references_path
+    click_button("Download these references")
+    
+  end
 end

@@ -58,4 +58,5 @@ describe ReferenceAttribute do
     expect(inproceedings_reference.reference_attributes.count).to be(4)
   end
 
+
 end

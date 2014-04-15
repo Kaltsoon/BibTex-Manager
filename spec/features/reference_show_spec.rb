@@ -35,5 +35,27 @@ describe "Edit reference page" do
 
       expect(page).to have_content "Reference 'reference_remove' has been removed" 
   end
+
+  it "reference not found", js:true do
+      create_custom_test_reference("reference")
+      page.find('.reference-attributes-popover').click
+      Reference.first.destroy
+      click_link("Show")  
+
+      expect(page).to have_content "Reference not found or removed!" 
+  end                               
+
+  it "single reference download", js:true do
+      create_custom_test_reference("reference")
+      page.find('.reference-attributes-popover').click
+      click_link("Show")  
+
+      expect(page).to have_content "Download"
+      click_link("Download")
+
+  end
+
+
+
   
 end
