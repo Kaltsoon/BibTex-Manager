@@ -8,7 +8,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-gem 'addressable', require: 'addressable/uri'
+gem 'addressable', require: ['addressable/uri', 'addressable/template']
 
 gem "nokogiri"
 
