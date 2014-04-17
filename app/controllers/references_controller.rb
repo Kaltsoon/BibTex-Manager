@@ -101,6 +101,10 @@ class ReferencesController < ApplicationController
     render :acm_fetch_results
   end
 
+  def save_references_from_acm
+    raise params[:reference].inspect;
+  end
+
   private
 
     def add_attributes(reference, attributes)

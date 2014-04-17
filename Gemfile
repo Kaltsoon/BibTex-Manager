@@ -8,6 +8,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'addressable'
+
 gem "nokogiri"
 
 group :production do

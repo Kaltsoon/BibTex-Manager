@@ -2,7 +2,8 @@ module AcmFetcher
 	extend ActiveSupport::Concern
 
 	require "nokogiri"
-	require "open-uri"
+	require "addressable/uri"
+
 
 	def fetch_bibtex_from_acm(url)
 		bibtex = ""
@@ -20,7 +21,8 @@ module AcmFetcher
 	private
 
 	def parse_url(url)
-		id = url.slice((url.rindex("?id=")+4)..url.length)
+		uri = Addressable::URI.parse(url)
+		id = uri.query_values["id"].include?(".") ? uri.query_values["id"].split(".")[1] : uri.query_values["id"]
 		return "http://dl.acm.org/exportformats.cfm?id=#{id}&expformat=bibtex"
 	end
 

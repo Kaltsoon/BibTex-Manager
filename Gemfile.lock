@@ -178,6 +178,7 @@ PLATFORMS
 
 DEPENDENCIES
   RubyInline (~> 3.12.2)
+  addressable
   bcrypt-ruby (~> 3.1.2)
   capybara
   coffee-rails (~> 4.0.0)

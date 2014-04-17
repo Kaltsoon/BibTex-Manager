@@ -1,10 +1,11 @@
+<%= javascript_include_tag "references/save_fetched_references" %>
 <div class="page-header">
 	<h1>Fetch results</h1>
 </div>
 <% unless @bibtex.empty? %>
 	<div class="alert alert-info alert-dismissable">
 	    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	    Select the references you want to save
+	    Select the references you want to save by toggling the "select" checkbox
 	 </div>
 	<p>
 	<%= @bibtex %>
@@ -21,33 +22,40 @@
 	        <th>Year</th>
 	      </tr>
 	    </thead>
-	    	<tr>
-	    		<td>
-	    			<input type="checkbox">
-	    		</td>
-	    		<td>
-	    			<span class="label label-primary">book</span>
-	    		</td>
-	    		<td>
-	    			<a>kirja6</a>
-	    		</td>
-	    		<td>
-	    			<a class="btn btn-default btn-xs"><i class="fa fa-eye"></i> BibTex</a>
-	    		</td>
-	    		<td>
-	    			Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas
-	    		</td>
-	    		<td>
-	    			Three Years of Design-based Research to Reform a Software Engineering Curriculum
-	    		</td>
-	    		<td>
-	    			2012
-	    		</td>
-	    	</tr>
-	    <tbody>
-	    </tbody>
-    </table>
-	<button class="btn btn-primary">Save selected references</button>
+	   	<%= form_tag "/save_references_from_acm", method: :post, id: "save-references-form" do %>
+		    <tbody id="fetched-references-list">
+		    	<tr>
+		    		<td class="text-center">
+		    			<%= check_box_tag "select", "selected", true %>
+		    		</td>
+		    		<td>
+		    			<span class="label label-primary">book</span>
+		    			<%= hidden_field_tag "reference[kirja666][ref_type]", "book", class: "reference-info-input" %>
+		    		</td>
+		    		<td>
+		    			<a>kirja666</a>
+		    			<%= hidden_field_tag "reference[kirja666][ref_name]", "kirja666", class: "reference-info-input" %>
+		    		</td>
+		    		<td>
+		    			<a class="btn btn-default btn-xs"><i class="fa fa-eye"></i> BibTex</a>
+		    		</td>
+		    		<td>
+		    			Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas
+		    			<%= hidden_field_tag "reference[kirja666][author]", "Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas", class: "reference-info-input" %>
+		    		</td>
+		    		<td>
+		    			Three Years of Design-based Research to Reform a Software Engineering Curriculum
+		    			<%= hidden_field_tag "reference[kirja666][title]", "Three Years of Design-based Research to Reform a Software Engineering Curriculum", class: "reference-info-input" %>
+		    		</td>
+		    		<td>
+		    			2012
+		    			<%= hidden_field_tag "reference[kirja666][year]", "2012", class: "reference-info-input" %>
+		    		</td>
+		    	</tr>
+		    </tbody>
+	    </table>
+		<%= submit_tag "Save selected references", class: "btn btn-primary" %>
+	<% end %>
 <% else %>
 	<span class="text-muted">
 		No references found from the given url
