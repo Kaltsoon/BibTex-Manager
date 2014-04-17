@@ -7,7 +7,6 @@ module AcmFetcher
 
 	def fetch_bibtex_from_acm(url)
 		bibtex = ""
-		raise parse_url(url)
 		begin
 			html_doc = Nokogiri::HTML(open(parse_url(url)))
 			html_doc.css("pre").each do |el|
