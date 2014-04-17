@@ -2,6 +2,7 @@ module AcmFetcher
 	extend ActiveSupport::Concern
 
 	require "nokogiri"
+	require "open-uri"
 	require "addressable/uri"
 
 
