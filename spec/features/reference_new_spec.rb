@@ -11,6 +11,7 @@ describe "New reference page" do
   before :each do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.start
+    Capybara.session_name = ":session_#{Time.now.to_i}"
     visit new_reference_path
   end
 

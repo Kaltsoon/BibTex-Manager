@@ -115,5 +115,35 @@ describe "Edit reference page" do
       
       expect(page).to have_content "Attribute 'author' was invalid!" 
   end
-  
+
+  it "can't remove requiret attributes" do
+    create_custom_test_reference("attribute_remove")
+    page.driver.delete("reference_attributes/1")
+
+    expect(page).to have_content "You are being redirected."
+  end
+
+  it "Reference attribute not found or reference attribute has been removed", js:true do
+    create_custom_test_reference("remove_attribute")
+
+    find('.reference-attributes-popover').click
+    new_attribute_page
+
+    within(".panel-body"){
+      select("volume", from: "reference_attribute_name")
+      fill_in('reference_attribute_value', with:'123')
+      click_button("Add") 
+    }
+    visit references_path
+    find('.reference-attributes-popover').click
+    
+    click_link("Edit")
+    click_link("Attributes")
+    ReferenceAttribute.last.destroy
+    click_link("Remove")
+    page.driver.browser.switch_to.alert.accept
+    expect(page).to have_content "Reference attribute not found or reference attribute has been removed"
+  end
+
+
 end

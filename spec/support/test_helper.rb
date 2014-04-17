@@ -50,15 +50,16 @@ module TestHelper
     reference2.reference_attributes = [FactoryGirl.create(:reference_attribute, name:"author", value: "henri korpela"),
                                        FactoryGirl.create(:reference_attribute, name:"title", value: "pullien paiston ABC"),
                                        FactoryGirl.create(:reference_attribute, name:"journal", value: "keittokirja"),
-                                       FactoryGirl.create(:reference_attribute, name:"year", value: "2014")]
+                                       FactoryGirl.create(:reference_attribute, name:"year", value: "2013")]
     reference2.save
 
     reference3 = Reference.new(name: "Joku", ref_type: "inproceedings")
     reference3.reference_attributes = [FactoryGirl.create(:reference_attribute, name:"author", value: "henri korpela"),
                                        FactoryGirl.create(:reference_attribute, name:"title", value: "Croisantin syonnin taito"),
                                        FactoryGirl.create(:reference_attribute, name:"booktitle", value: "Croisanttien maailma"),
-                                       FactoryGirl.create(:reference_attribute, name:"year", value: "2014")]
+                                       FactoryGirl.create(:reference_attribute, name:"year", value: "2012")]
     reference3.save
+    visit references_path
   end
   
 end
