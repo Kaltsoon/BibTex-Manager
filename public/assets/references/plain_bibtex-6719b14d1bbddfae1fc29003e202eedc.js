@@ -1,0 +1,1 @@
+$(document).ready(function(){var o=new ZeroClipboard($("#copy-to-clipboard"),{moviePath:"http://www.paulund.co.uk/playground/demo/zeroclipboard-demo/zeroclipboard/ZeroClipboard.swf",debug:!1});o.on("load",function(o){o.on("complete",function(o,e){o.setText(e.text)})}),$("#global-zeroclipboard-html-bridge").on("click",function(){$("#copy-to-clipboard").popover("show")})});

@@ -1,0 +1,1 @@
+$(document).on("ready",function(){$("input#select").on("click",function(){$(this).is(":checked")?$(".reference-info-input").removeAttr("disabled"):$(".reference-info-input").attr("disabled","disabled")})});
