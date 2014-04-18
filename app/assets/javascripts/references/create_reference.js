@@ -16,6 +16,9 @@ var REFERENCE_CREATE_MODULE = (function(){
 			}
 			actions[type]();
 		}
+		$("#attributes_form input[type=text]").on("keyup", function(){
+			display_generated_id();
+		});
 	}
 
 	var display_generated_id = function(){
@@ -42,13 +45,12 @@ var REFERENCE_CREATE_MODULE = (function(){
 	}
 })();
 
-$(document).on("page:load ready",function(){
+$(document).on("ready",function(){
 	REFERENCE_CREATE_MODULE.display_fields();
-	REFERENCE_CREATE_MODULE.display_generated_id();
-	$("#reference_ref_type").change(function(){
+	$("#reference_ref_type").on("change", function(){
 		REFERENCE_CREATE_MODULE.display_fields();
 	});
-	$("#attributes_form input[type=text]").keyup(function(){
+	$("#attributes_form input[type=text]").on("keyup", function(){
 		REFERENCE_CREATE_MODULE.display_generated_id();
 	});
 });
