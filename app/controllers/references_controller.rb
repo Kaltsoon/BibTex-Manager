@@ -1,6 +1,7 @@
 class ReferencesController < ApplicationController
   include BibtexGenerator
   include AcmFetcher
+  include IdGenerator
 
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
   before_action :set_types, only: [:new, :create]
@@ -62,6 +63,10 @@ class ReferencesController < ApplicationController
       format.html { redirect_to references_url, notice: "Reference '#{ref_name}' has been removed" }
       format.json { head :no_content }
     end
+  end
+
+  def generate_id_for_reference
+      render json: { generated_id: generate_id(params[:attributes]) }
   end
 
   def plain_bibtex

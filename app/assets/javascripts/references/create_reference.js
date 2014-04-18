@@ -25,10 +25,15 @@ var REFERENCE_CREATE_MODULE = (function(){
 			var attribute_name = field_name.substring(field_name.indexOf("[")+1, field_name.length-1)
 			attributes[attribute_name] = $(field).val();
 		});
+		fetch_generated_id(attributes);
 	}
 
 	var fetch_generated_id = function(attributes){
-		
+		if(!$("#disable-generation").is(":checked")){
+			$.post("/generate_id_for_reference", { attributes: attributes }).done(function(data){
+				$("#reference_name").val(data.generated_id);
+			});
+		}
 	}
 
 	return {
