@@ -49,7 +49,6 @@ keywords = {MIDI, bend, controller, interactive, performance, sensors},
       return current_char
     end
 
-    #eats the string from bibtex_string and returns true if possible
     def accept(string)
       skip_white_space
       bibtex_index = @current_index
@@ -109,9 +108,7 @@ keywords = {MIDI, bend, controller, interactive, performance, sensors},
 
       type = reference_type.downcase
 
-      puts type
-
-
+      puts type #asdfasdfasdf
 
       expect('{')
       id = reference_id
