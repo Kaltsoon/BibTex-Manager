@@ -76,28 +76,22 @@ class ReferencesController < ApplicationController
 
   def download_bibtex
     references = Reference.includes(:reference_attributes).all
-    bib = generate_bibtex_string(references)
-    send_data(bib.to_s, filename: "bibtex.bib")
+    send_bib(references)
   end
 
   def download_bibtex_single_reference
     reference = Reference.find(params[:id])
-    bib = generate_bibtex_string([reference])
-    send_data(bib.to_s, filename: "bibtex.bib")
+    send_bib(references)
   end
 
   def download_filtered_references
+    references = []
     if(params.has_key?(:references))
-      id_hash = params[:references]
-      references = []
-      id_hash.each do |key,val|
+      params[:references].each do |key,val|
         references.push(Reference.find(key))
       end
-      bib = generate_bibtex_string(references)
-      send_data(bib.to_s, filename: "bibtex.bib")
-    else
-      send_data(" ", filename: "bibtex.bib")
     end
+    send_bib(references)
   end
 
   def fetch_references_from_acm
@@ -111,6 +105,14 @@ class ReferencesController < ApplicationController
   end
 
   private
+
+    def send_bib(references)
+      if not references.empty?
+        send_data(generate_bibtex_string(references).to_s, filename: "bibtex.bib")
+      else
+        send_data(" ", filename: "bibtex.bib")
+      end
+    end
 
     def add_attributes(reference, attributes)
       attributes.each do |key, value|

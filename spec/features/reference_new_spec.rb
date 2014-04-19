@@ -24,9 +24,10 @@ describe "New reference page" do
   end
 
   it "doesn't save reference if name not valid", js:true do
-    fill_in_attributes("")
-
-    expect(page).to have_content "error prohibited this reference from being saved"
+    visit new_reference_path
+    fill_in("reference_name", with: "")
+    click_button("submit_reference")
+    expect(page).to have_content "Name can't be blank"
   end
 
   it "saves reference if attributes and name are valid", js:true do

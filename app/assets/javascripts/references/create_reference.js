@@ -24,9 +24,11 @@ var REFERENCE_CREATE_MODULE = (function(){
 	var display_generated_id = function(){
 		var attributes = {}
 		$("#attributes_form input[type=text]").each(function(index, field){
-			var field_name = $(field).attr("name");
-			var attribute_name = field_name.substring(field_name.indexOf("[")+1, field_name.length-1)
-			attributes[attribute_name] = $(field).val();
+			if($(field).val() != ""){
+				var field_name = $(field).attr("name");
+				var attribute_name = field_name.substring(field_name.indexOf("[")+1, field_name.length-1);
+				attributes[attribute_name] = $(field).val();
+			}
 		});
 		fetch_generated_id(attributes);
 	}
@@ -52,5 +54,12 @@ $(document).on("ready",function(){
 	});
 	$("#attributes_form input[type=text]").on("keyup", function(){
 		REFERENCE_CREATE_MODULE.display_generated_id();
+	});
+	$("#disable-generation").on("click", function(){
+		if($(this).is(":checked")){
+			$("#auto-generate-help").fadeOut();
+		}else{
+			$("#auto-generate-help").fadeIn();
+		}
 	});
 });
