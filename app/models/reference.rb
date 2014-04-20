@@ -2,6 +2,7 @@ class Reference < ActiveRecord::Base
 	include BibtexGenerator
 
 	has_many :reference_attributes, dependent: :destroy
+	
 	validates :name, uniqueness: true, presence: true
 	validates :ref_type, presence: true
 	validate :reference_attributes, :validate_required_attributes
@@ -12,15 +13,15 @@ class Reference < ActiveRecord::Base
 	end
 
 	def can_remove_attribute?(attribute)
-		return "#{ref_type.downcase.capitalize}Reference".constantize.fills_required_attributes?(reference_attributes.map{|a| a.name}-[attribute.name])
+		return get_type_instance.fills_required_attributes?(reference_attributes.map{|a| a.name}-[attribute.name])
 	end
 
 	def get_available_attributes()
-		return "#{ref_type.downcase.capitalize}Reference".constantize.get_available_attributes
+		return get_type_instance.get_available_attributes
 	end
 
 	def get_required_attributes()
-		return "#{ref_type.downcase.capitalize}Reference".constantize.get_required_attributes
+		return get_type_instance.get_required_attributes
 	end
 
 	def get_attributes_not_set()
@@ -33,13 +34,17 @@ class Reference < ActiveRecord::Base
 
 	def fills_required_attributes?
 		if(Reference.get_available_types.include?(ref_type))
-			return "#{ref_type.downcase.capitalize}Reference".constantize.fills_required_attributes?(reference_attributes.map{|a| a.name})
+			return get_type_instance.fills_required_attributes?(reference_attributes.map{|a| a.name})
 		else
 			return false
 		end
 	end
 
 	private
+
+	def get_type_instance
+		return "#{ref_type.downcase.capitalize}Reference".constantize
+	end
 
 	def validate_type
 		if(not Reference.get_available_types.include?(ref_type))

@@ -1,8 +1,7 @@
 class ReferenceAttributesController < ApplicationController
+  
   before_action :set_reference_attribute, only: [:show, :edit, :update, :destroy]
 
-  # POST /reference_attributes
-  # POST /reference_attributes.json
   def create
     @reference_attribute = ReferenceAttribute.new(reference_attribute_params)
     respond_to do |format|
@@ -16,8 +15,6 @@ class ReferenceAttributesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /reference_attributes/1
-  # PATCH/PUT /reference_attributes/1.json
   def update
     respond_to do |format|
       if @reference_attribute.update(reference_attribute_params)
@@ -30,8 +27,6 @@ class ReferenceAttributesController < ApplicationController
     end
   end
 
-  # DELETE /reference_attributes/1
-  # DELETE /reference_attributes/1.json
   def destroy
     attribute = @reference_attribute
     if(@reference_attribute.reference.can_remove_attribute?(@reference_attribute))
@@ -46,7 +41,7 @@ class ReferenceAttributesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    
     def set_reference_attribute
       if !ReferenceAttribute.where(:id => params[:id]).first.nil?
         @reference_attribute = ReferenceAttribute.find(params[:id])
@@ -55,7 +50,6 @@ class ReferenceAttributesController < ApplicationController
       end
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def reference_attribute_params
       params.require(:reference_attribute).permit(:reference_id, :name, :value)
     end
