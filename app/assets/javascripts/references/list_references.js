@@ -111,6 +111,14 @@ var REFERENCE_LIST_MODULE =
 		});
 	}
 
+	var string_summary = function(str, max_len){
+		if(str.length <= max_len){
+			return str;
+		}else{
+			return (str.substring(0,max_len)+"...")
+		}
+	}
+
 	var render = function(){
 		$("#download-filtered-references").removeAttr("disabled");
 		if(references.length==0){
@@ -120,14 +128,15 @@ var REFERENCE_LIST_MODULE =
 			attributes=[];
 			reference.reference_attributes.forEach(function(attr){
 				if(attr.name=="author" || attr.name == "editor"){
-					attributes[0] = attr;
+					attributes[0] = string_summary(attr.value,25);
 				}else if(attr.name=="title"){
-					attributes[1] = attr;
+					attributes[1] = string_summary(attr.value,25);
 				}else if(attr.name=="year"){
-					attributes[2] = attr;
+					attributes[2] = string_summary(attr.value,25);
 				}
 			});
-			reference.displayed_attributes=attributes;
+			reference.name_summary = string_summary(reference.name, 25);
+			reference.displayed_attributes = attributes;
 		});
 		$("#reference-list").html(Mustache.to_html($("#reference-row-template").html(), { references: references }));
 		bind_popovers();

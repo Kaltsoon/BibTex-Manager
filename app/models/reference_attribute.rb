@@ -2,7 +2,8 @@ class ReferenceAttribute < ActiveRecord::Base
 	
 	belongs_to :reference
 	
-	validates :name, uniqueness: { scope: :reference_id }, presence: true
+	validates :name, uniqueness: { scope: :reference_id }, unless: Proc.new { |a| a.reference_id.blank? }
+	validates :name, presence: true
 	validates :value, presence: true
 	validate :name, :validate_attribute
 

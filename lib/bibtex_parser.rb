@@ -70,7 +70,7 @@ module BibtexParser
       if current_char == '}'
         return nil
       end
-      return next_word_until(['='])
+      return next_word_until(['=']).gsub(/\s+/, "")
     end
 
     def attribute_value
@@ -123,9 +123,7 @@ module BibtexParser
       skip_white_space
       word = ""
       while (not separators.include?(current_char)) && @current_index < @bibtex_string.length do
-        if(not current_char == " ")
-          word += current_char
-        end
+        word += current_char
         next_char
       end
       return word

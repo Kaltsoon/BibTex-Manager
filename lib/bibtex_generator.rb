@@ -1,6 +1,7 @@
 #encoding: utf-8
 
 module BibtexGenerator
+	
 	extend ActiveSupport::Concern
 
 	def generate_bibtex_string(references)

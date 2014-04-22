@@ -81,7 +81,7 @@
                     </div>" 
                 data-placement="right"
                 data-html="true" data-original-title="{{name}}">
-                {{name}}
+                {{name_summary}}
             </a>
           </td>
           <td><a class="btn btn-default btn-xs reference-bibtex-popover" rel="popover"
@@ -95,7 +95,7 @@
                 </a>
           </td>
           {{#displayed_attributes}}
-            <td>{{value}}</td>
+            <td>{{.}}</td>
           {{/displayed_attributes}}
         </tr>
       {{/references}}

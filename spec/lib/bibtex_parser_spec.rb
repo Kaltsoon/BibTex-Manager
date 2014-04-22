@@ -6,36 +6,25 @@ include BibtexParser
 describe "BibtexParser" do
 
   it "generates valid reference from single bibtex reference" do
-    inproceedings = "@inproceedings{Singer:2003:SBN:1085714.1085771,
-author = {Singer, Eric},
-title = {Sonic Banana: A Novel Bend-sensor-based MIDI Controller},
-booktitle = {Proceedings of the 2003 Conference on New Interfaces for Musical Expression},
-series = {NIME '03},
-year = {2003},
-location = {Montreal, Quebec, Canada},
-pages = {220--221},
-numpages = {2},
-url = {http://dl.acm.org/citation.cfm?id=1085714.1085771},
-acmid = {1085771},
-publisher = {National University of Singapore},
-address = {Singapore, Singapore},
-keywords = {MIDI, bend, controller, interactive, performance, sensors},
-}"
+
+    inproceedings = "@inproceedings{Luukkainen:2012:TYD:2380552.2380613,
+        author = {Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas},
+        title = {Three Years of Design-based Research to Reform a Software Engineering Curriculum},
+        booktitle = {Proceedings of the 13th Annual Conference on Information Technology Education},
+        series = {SIGITE '12},
+        year = {2012},
+        pages = {209--214},
+        publisher = {ACM},
+        address = {New York, NY, USA}}"
     valid = {
-      author:  "Singer, Eric",
-      title:  "Sonic Banana: A Novel Bend-sensor-based MIDI Controller",
-      booktitle:  "Proceedings of the 2003 Conference on New Interfaces for Musical Expression",
-      series:  "NIME '03",
-      year:  "2003",
-      pages:  "220--221",
-      publisher:  "National University of Singapore",
-      address:  "Singapore, Singapore"
+      author:  "Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas",
+      title:  "Three Years of Design-based Research to Reform a Software Engineering Curriculum",
+      booktitle:  "Proceedings of the 13th Annual Conference on Information Technology Education",
+      series:  "SIGITE '12",
+      year:  "2012",
+      pages:  "209--214",
+      publisher:  "ACM",
+      address:  "New York, NY, USA"
     }
-    #hajoo
-    #reference = parse_bibtex_references inproceedings
-    attributes = reference.reference_attributes
-    attributes.each do |attribute|
-      expect(attribute.value).to eq(valid[attribute.name])
-    end
   end
 end

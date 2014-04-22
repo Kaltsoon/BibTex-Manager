@@ -87,7 +87,13 @@ class ReferencesController < ApplicationController
   def fetch_references_from_acm
     bibtex = fetch_bibtex_from_acm(params[:url])
     references = parse_bibtex_references(bibtex)
-    raise references.inspect
+    valid_count = 0
+    references.each do |ref|
+      if ref.save
+        valid_count = valid_count + 1
+      end
+    end
+    redirect_to references_path, notice: "#{valid_count} " + (valid_count == 1 ? "reference" : "references") + " fetched from ACM!"
   end
 
   private

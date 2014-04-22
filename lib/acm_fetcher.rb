@@ -1,4 +1,5 @@
 module AcmFetcher
+	
 	extend ActiveSupport::Concern
 
 	require "nokogiri"

@@ -1,7 +1,8 @@
 #encoding: utf-8
 
 module IdGenerator
-extend ActiveSupport::Concern
+
+	extend ActiveSupport::Concern
 	
 	def generate_id(attributes)
 		if !enough_data_to_generate(attributes)
