@@ -2,7 +2,7 @@ require 'spec_helper'
 
 include TestHelper
 
-describe "Edit reference page" do
+describe "Show reference page" do
   
   before :all do
     self.use_transactional_fixtures = false
@@ -54,8 +54,5 @@ describe "Edit reference page" do
       click_link("Download")
 
   end
-
-
-
   
 end

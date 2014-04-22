@@ -71,7 +71,7 @@ class ReferencesController < ApplicationController
 
   def download_bibtex_single_reference
     reference = Reference.find(params[:id])
-    send_bib(references)
+    send_bib([reference])
   end
 
   def download_filtered_references
