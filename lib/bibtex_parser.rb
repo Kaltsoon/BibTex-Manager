@@ -1,7 +1,12 @@
+#encoding: utf-8
+
 module BibtexParser
-extend ActiveSupport::Concern
+  
+  extend ActiveSupport::Concern
+
   def parse_bibtex_references(bibtex)
-    bibtex = bibtex.gsub(/\s+/, "")
+    bibtex = bibtex.gsub(/\s+/, " ")
+    bibtex = replace_specal_symbols(bibtex)
     @bibtex_string = bibtex
     @current_index = 0
     references = []
@@ -61,6 +66,7 @@ extend ActiveSupport::Concern
     end
 
     def attribute_key
+      skip_white_space
       if current_char == '}'
         return nil
       end
@@ -80,6 +86,7 @@ extend ActiveSupport::Concern
     end
 
     def accept(string)
+      skip_white_space
       bibtex_index = @current_index
       string_index = 0
       while string_index < string.length do
@@ -113,15 +120,32 @@ extend ActiveSupport::Concern
     end
 
     def next_word_until(separators)
+      skip_white_space
       word = ""
       while (not separators.include?(current_char)) && @current_index < @bibtex_string.length do
-        word += current_char
+        if(not current_char == " ")
+          word += current_char
+        end
         next_char
       end
       return word
     end
 
+    def skip_white_space
+      while current_char == " " && not(is_end_of_input)
+        @current_index += 1
+      end
+    end
+
     def is_end_of_input
       return @current_index >= @bibtex_string.length - 1
+    end
+
+    def replace_specal_symbols(bibtex)
+      special_symbols = {'\\"{a}' => 'ä', '\\"{A}' => 'Ä', '\\"{o}' => 'ö', '\\"{O}' => 'Ö'}
+      special_symbols.each do |key, value|
+        bibtex = bibtex.gsub(key, value)
+      end
+      return bibtex
     end
 end
