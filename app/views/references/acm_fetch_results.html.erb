@@ -2,14 +2,11 @@
 <div class="page-header">
 	<h1>Fetch results</h1>
 </div>
-<% unless @bibtex.empty? %>
+<% unless @references.empty? %>
 	<div class="alert alert-info alert-dismissable">
 	    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 	    Select the references you want to save by toggling the "select" checkbox
 	 </div>
-	<p>
-	<%= @bibtex %>
-	</p>
 	<table class="table table-bordered table-hover">
 	    <thead>
 	      <tr>
@@ -17,41 +14,49 @@
 	        <th>Type</th>
 	        <th>Id</th>
 	        <th>BibTex</th>
-	        <th>Author<span class="text-muted">/</span>Editor</th>
-	        <th>Title</th>
-	        <th>Year</th>
 	      </tr>
 	    </thead>
 	   	<%= form_tag "/save_references_from_acm", method: :post, id: "save-references-form" do %>
 		    <tbody id="fetched-references-list">
-		    	<tr>
-		    		<td class="text-center">
-		    			<%= check_box_tag "select", "selected", true %>
-		    		</td>
-		    		<td>
-		    			<span class="label label-primary">book</span>
-		    			<%= hidden_field_tag "reference[kirja666][ref_type]", "book", class: "reference-info-input" %>
-		    		</td>
-		    		<td>
-		    			<a>kirja666</a>
-		    			<%= hidden_field_tag "reference[kirja666][ref_name]", "kirja666", class: "reference-info-input" %>
-		    		</td>
-		    		<td>
-		    			<a class="btn btn-default btn-xs"><i class="fa fa-eye"></i> BibTex</a>
-		    		</td>
-		    		<td>
-		    			Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas
-		    			<%= hidden_field_tag "reference[kirja666][author]", "Luukkainen, Matti and Vihavainen, Arto and Vikberg, Thomas", class: "reference-info-input" %>
-		    		</td>
-		    		<td>
-		    			Three Years of Design-based Research to Reform a Software Engineering Curriculum
-		    			<%= hidden_field_tag "reference[kirja666][title]", "Three Years of Design-based Research to Reform a Software Engineering Curriculum", class: "reference-info-input" %>
-		    		</td>
-		    		<td>
-		    			2012
-		    			<%= hidden_field_tag "reference[kirja666][year]", "2012", class: "reference-info-input" %>
-		    		</td>
-		    	</tr>
+		    	<% @references.each do |reference| %>
+			    	<tr>
+			    		<td class="text-center">
+			    			<%= check_box_tag "select", "selected", true %>
+			    		</td>
+			    		<td>
+			    			<span class="label label-primary"><%= reference.ref_type %></span>
+			    			<%= hidden_field_tag "reference[#{reference.name}][ref_type]", reference.ref_type, class: "reference-info-input" %>
+			    		</td>
+			    		<td>
+			    			<a rel="popover" class="reference-attributes-popover" 
+                data-content="
+                    <% reference.reference_attributes.each do |attribute| %>
+                      <p>
+                        <strong><%= attribute.name %></strong> <span class='text-muted'>-</span> <%= attribute.value %>
+                      </p>
+                    <% end %>
+                  	" 
+                data-placement="right"
+                data-html="true" data-original-title="<%= reference.name %>"><%= reference.name %></a>
+			    			<%= hidden_field_tag "reference[#{reference.name}][ref_name]", reference.name, class: "reference-info-input" %>
+			    		</td>
+			    		<td>
+			    			<a 
+			    			class="btn btn-default btn-xs reference-bibtex-popover" rel="popover"
+			                  data-content="
+			                    <div class='well well-sm'>
+			                      <%= reference.get_bibtex %>
+			                    </div>" 
+			                  data-placement="right"
+			                  data-html="true" data-original-title="Plain BibTex">
+                  				<i class='fa fa-eye'></i> BibTex
+                			</a>
+			    		</td>
+			    		<% reference.reference_attributes.each do |attribute| %>
+			    			<%= hidden_field_tag "reference[#{reference.name}][attributes][#{attribute.name}]", attribute.value, class: "reference-info-input" %>
+			    		<% end %>
+			    	</tr>
+		    	<% end %>
 		    </tbody>
 	    </table>
 		<%= submit_tag "Save selected references", class: "btn btn-primary" %>

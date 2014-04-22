@@ -85,13 +85,9 @@ class ReferencesController < ApplicationController
   end
 
   def fetch_references_from_acm
-    url = params[:url]
-    @bibtex = fetch_bibtex_from_acm(url)
-    render :acm_fetch_results
-  end
-
-  def save_references_from_acm
-    raise params[:reference].inspect;
+    bibtex = fetch_bibtex_from_acm(params[:url])
+    references = parse_bibtex_references(bibtex)
+    raise references.inspect
   end
 
   private

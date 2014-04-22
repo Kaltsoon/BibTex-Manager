@@ -4,8 +4,7 @@ Bibtex::Application.routes.draw do
   resources :references
 
   post "/generate_id_for_reference", to: "references#generate_id_for_reference"
-  post "/save_references_from_acm", to: "references#save_references_from_acm"
-  post "/acm_fetch_results", to: "references#fetch_references_from_acm"
+  post "/fetch_references_from_acm", to: "references#fetch_references_from_acm"
   post "/download_filtered_references", to: "references#download_filtered_references"
   
   get "/plain_bibtex", to: "references#plain_bibtex"
