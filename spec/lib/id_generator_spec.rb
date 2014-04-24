@@ -15,13 +15,45 @@ describe "id generator tests" do
 		generate_data_with_generated_names
 		generate_data_with_user_given_names
 		
-		attributes = {name: "nimi", author: "Kirja", year: "2014"}
+		attributes = {author: "Kirja", year: "2014"}
 		expect(IdGenerator.generate_id(attributes)).to eq("Kir2014zzzc")
 	end
 	
 	it "Database doesn't contain generated reference names" do
-		attributes = {name: "nimi", author: "test", year: "2014"}
+		attributes = {author: "test", year: "2014"}
 		expect(IdGenerator.generate_id(attributes)).to eq("Tes2014")
+	end
+	
+	it "Book with editor" do
+		generate_data_with_generated_names
+		generate_data_with_user_given_names
+		
+		attributes = {editor: "Edit", year: "2014"}
+		expect(IdGenerator.generate_id(attributes)).to eq("Edi2014")
+	end
+	
+	it "Book with editor and author" do
+		generate_data_with_generated_names
+		generate_data_with_user_given_names
+		
+		attributes = {editor: "Edit", author: "Aut", year: "2014"}
+		expect(IdGenerator.generate_id(attributes)).to eq("AutEdi2014")
+	end
+	
+	it "ABC Test" do
+		reference = Reference.new(name: "Abc2014", ref_type: "book")
+    	reference.reference_attributes = [FactoryGirl.create(:reference_attribute, name: "author", value: "ABC"),
+                                       FactoryGirl.create(:reference_attribute, name:"title", value: "Aapinen"),
+                                       FactoryGirl.create(:reference_attribute, name:"publisher", value: "otava"),
+                                       FactoryGirl.create(:reference_attribute, name:"year", value: "2014")]
+    	reference.save
+    	attributes = {author: "ABC", year: "2014"}
+		expect(IdGenerator.generate_id(attributes)).to eq("Abc2014a")
+	end
+	
+	it "More than one author" do
+    	attributes = {author: "ABC, Testaaja", year: "2014"}
+    	expect(IdGenerator.generate_id(attributes)).to eq("AbcTes2014")
 	end
 	
 	# Help methods
