@@ -13,7 +13,7 @@ Travis CI: https://travis-ci.org/Kaltsoon/dream-team
 
 ### Raportti
 
-https://docs.google.com/document/d/1N2ubqMf9rnLx2oH1LzF9ny-DWnv2IDlEJJSoT8o7vmU/edit?usp=sharing
+https://github.com/Kaltsoon/dream-team/blob/master/Miniprojekti_loppuyhteenveto.pdf?raw=true
 
 ### DoD
 
