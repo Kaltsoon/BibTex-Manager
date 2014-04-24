@@ -1,8 +1,7 @@
 #encoding: utf-8
 
 module IdGenerator
-
-	extend ActiveSupport::Concern
+extend ActiveSupport::Concern
 	
 	def generate_id(attributes)
 		if !enough_data_to_generate(attributes)
@@ -27,26 +26,40 @@ module IdGenerator
 	
 	def generate_id_string(attributes)
 		year = attributes[:year]
-		name = get_author_editor_part(attributes)
+		name = get_begin_part(attributes)
 		abc = generate_abc_end(name, year)
 		return name + year + abc
 	end
 	
-	def get_author_editor_part(attributes)
+	# Begin part generation
+	
+	def get_begin_part(attributes)
 		s = ""
-		if attributes[:editor].nil?
-			s = attributes[:author]
-		else
-			s = attributes[:editor]
+		if !attributes[:author].nil?
+			s = s + generate_name_part(attributes[:author])
 		end
-		
-		if(s.length > 3)
-			s[0,3].capitalize
-		else
-			return s[0].capitalize
+		if !attributes[:editor].nil?
+			s = s + generate_name_part(attributes[:editor])
 		end
+		return s
 	end
-
+	
+	def generate_name_part(s)
+		name = ""
+		parts = s.split(",")
+		parts.each do |part|
+			part = part.gsub(/\s+/,"")
+			if(part.length >= 3)
+				name = name + part[0,3].capitalize
+			else
+				name = name + part[0].capitalize
+			end
+		end
+		return name
+	end
+	
+	# ABC extension part generation
+	
 	def generate_abc_end(name, year)
 		same_like = get_same_like(name, year)
 		if same_like.count == 0
@@ -60,7 +73,7 @@ module IdGenerator
 		start = name + year
 		references = Reference.all
 		references.each do |ref|
-			if (ref.name =~ /#{start}/) == 0 && ref.name[start.length - 1, ref.name.length - 1] =~ /[a-z][^A-Z]/
+			if (ref.name =~ /#{start}/) == 0
 				same_like.push(ref)
 			end
 		end
@@ -68,6 +81,9 @@ module IdGenerator
 	end
 	
 	def get_next_fix(l_fix)
+		if(l_fix.empty? || l_fix.length == 0)
+			return alphabet[0]
+		end
 		last = l_fix[l_fix.length - 1].downcase
 		if last == alphabet[alphabet.count - 1]
 			return l_fix + alphabet[0]
@@ -104,7 +120,10 @@ module IdGenerator
 	end
 	
 	def compare(fix1, fix2)
-		if fix1.length > fix2.length || (fix1.length == fix2.length && alphabet.index(fix1[fix1.length - 1].downcase) > alphabet.index(fix2[fix2.length - 1].downcase))
+		if fix1.length == 0
+			return false
+		end
+		if fix2.length == 0 || fix1.length > fix2.length || (fix1.length == fix2.length && alphabet.index(fix1[fix1.length - 1].downcase) > alphabet.index(fix2[fix2.length - 1].downcase))
 			return true
 		end
 		return false

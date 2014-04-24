@@ -11,6 +11,10 @@ Travis CI: https://travis-ci.org/Kaltsoon/dream-team
 
 ## Backlogs
 
+### Raportti
+
+https://docs.google.com/document/d/1N2ubqMf9rnLx2oH1LzF9ny-DWnv2IDlEJJSoT8o7vmU/edit?usp=sharing
+
 ### DoD
 
 Definition of Done: https://docs.google.com/document/d/15bGEKN1nSx8-Pd6dH_bzOML-K1e7IqfyJDaa8bLoFS4/edit?usp=sharing
